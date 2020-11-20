@@ -40,8 +40,15 @@ sudo git clone https://github.com/S3cur3Th1sSh1t/Creds.git /opt/Creds
 sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-PrintDemon.git /opt/Invoke-PrintDemon
 sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-SharpLoader.git /opt/Invoke-SharpLoader
 sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-Sharpcradle.git /opt/Invoke-SharpCradle
+sudo git clone https://github.com/S3cur3Th1sSh1t/Get-System-Techniques.git /opt/Get-System-Techniques
+sudo git clone https://github.com/S3cur3Th1sSh1t/SharpLocker.git /opt/SharpLocker
+sudo git clone https://github.com/S3cur3Th1sSh1t/xencrypt.git /opt/xencrypt
 sudo git clone https://github.com/Flangvik/SimpleSourceProtector.git /opt/SimpleSourceProtector
 sudo git clone https://github.com/SnaffCon/Snaffler.git /opt/Snaffler
+sudo git clone https://github.com/Soledge/BlockEtw.git /opt/BlockEtw
+sudo git clone https://github.com/jxy-s/herpaderping.git /opt/herpaderping
+sudo git clone https://github.com/bytecod3r/Cobaltstrike-Aggressor-Scripts-Collection.git /opt/CobaltStrike-Agressor-Scripts-Collection
+sudo git clone https://github.com/bats3c/darkarmour.git /opt/darkarmour
 
 
 sudo gem install evil-winrm

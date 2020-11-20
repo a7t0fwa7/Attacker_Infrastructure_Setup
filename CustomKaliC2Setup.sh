@@ -29,6 +29,20 @@ sudo git clone https://github.com/byt3bl33d3r/SprayingToolkit.git /opt/SprayingT
 sudo git clone https://github.com/FortyNorthSecurity/Egress-Assess.git /opt/Egress-Assess
 sudo git clone https://github.com/itm4n/PrivescCheck.git /opt/PrivescCheck
 sudo git clone https://github.com/aloksaurabh/OffenPowerSh.git /opt/OffenPowerSh
+sudo git clone https://github.com/artofwar2306/Invoke-Recon.git /opt/Invoke-Recon
+sudo git clone https://github.com/danielbohannon/Invoke-Obfuscation.git /opt/Invoke-Obfuscation
+sudo git clone https://github.com/CBHue/PyFuscation.git /opt/PyFuscation
+sudo git clone https://github.com/tokyoneon/Chimera.git /opt/Chimera
+sudo git clone https://github.com/S3cur3Th1sSh1t/WinPwn.git /opt/WinPWn
+sudo git clone https://github.com/S3cur3Th1sSh1t/PowerSharpPack.git /opt/PowerSharpPack
+sudo git clone https://github.com/S3cur3Th1sSh1t/MailSniper.git /opt/MailSniper
+sudo git clone https://github.com/S3cur3Th1sSh1t/Creds.git /opt/Creds
+sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-PrintDemon.git /opt/Invoke-PrintDemon
+sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-SharpLoader.git /opt/Invoke-SharpLoader
+sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-Sharpcradle.git /opt/Invoke-SharpCradle
+sudo git clone https://github.com/Flangvik/SimpleSourceProtector.git /opt/SimpleSourceProtector
+sudo git clone https://github.com/SnaffCon/Snaffler.git /opt/Snaffler
+
 
 sudo gem install evil-winrm
 

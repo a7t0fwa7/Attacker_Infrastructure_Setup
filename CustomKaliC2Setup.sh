@@ -27,8 +27,10 @@ sudo git clone https://github.com/chinarulezzz/spoofcheck /opt/spoofcheck; cd /o
 sudo git clone https://gist.github.com/superkojiman/11076951 /opt/namemash; sudo chmod +x /opt/namemash/namemash.py
 sudo git clone https://github.com/byt3bl33d3r/SprayingToolkit.git /opt/SprayingToolkit; cd /opt/SprayingToolkit; sudo pip3 install -r requirements.txt
 sudo git clone https://github.com/FortyNorthSecurity/Egress-Assess.git /opt/Egress-Assess
-sudo gem install evil-winrm
+sudo git clone https://github.com/itm4n/PrivescCheck.git /opt/PrivescCheck
+sudo git clone https://github.com/aloksaurabh/OffenPowerSh.git /opt/OffenPowerSh
 
+sudo gem install evil-winrm
 
 sudo git clone --recurse-submodules https://github.com/cobbr/Covenant /opt/Covenant
 
@@ -42,47 +44,47 @@ mv ./Data/ReferenceSourceLibraries/ ../ReferenceSourceLibraries/
 mv ./Data/EmbeddedResources/ ../EmbeddedResources/
 
 
-mv ./Models/Covenant/ ./Models/Tachyon/
-mv ./Components/CovenantUsers/ ./Components/TachyonUsers/
-mv ./Components/Grunts/ ./Components/Axion/
-mv ./Models/Grunts/ ./Models/Axion/
-mv ./Data/Grunt/GruntBridge/ ./Data/Grunt/AxionBridge/
-mv ./Data/Grunt/GruntHTTP/ ./Data/Grunt/AxionHTTP/
-mv ./Data/Grunt/GruntSMB/ ./Data/Grunt/AxionSMB/
-mv ./Components/GruntTaskings/ ./Components/AxionTaskings/
-mv ./Components/GruntTasks/ ./Components/AxionTasks/
-mv ./Data/Grunt/ ./Data/Axion/
+mv ./Models/Covenant/ ./Models/Venom/
+mv ./Components/CovenantUsers/ ./Components/VenomUsers/
+mv ./Components/Grunts/ ./Components/Nagas/
+mv ./Models/Grunts/ ./Models/Nagas/
+mv ./Data/Grunt/GruntBridge/ ./Data/Grunt/NagaBridge/
+mv ./Data/Grunt/GruntHTTP/ ./Data/Grunt/NagaHTTP/
+mv ./Data/Grunt/GruntSMB/ ./Data/Grunt/NagaSMB/
+mv ./Components/GruntTaskings/ ./Components/NagaTaskings/
+mv ./Components/GruntTasks/ ./Components/NagaTasks/
+mv ./Data/Grunt/ ./Data/Naga/
 
 
 
-find ./ -type f -print0 | xargs -0 sed -i "s/Grunt/Axion/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/GRUNT/AXION/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/grunt/axion/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/Grunt/Naga/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/GRUNT/NAGA/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/grunt/naga/g"
 
 #find ./ -type f -print0 | xargs -0 sed -i "s/covenant/easypeasy/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/Covenant/Tachyon/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/COVENANT/TACHYON/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/Covenant/Venom/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/COVENANT/VENOM/g"
 
 find ./ -type f -print0 | xargs -0 sed -i "s/ExecuteStager/ExecNiveau/g"
 #find ./ -type f -print0 | xargs -0 sed -i "s/REPLACE_PROFILE/REP_PROF/g"
 #find ./ -type f -print0 | xargs -0 sed -i "s/REPLACE_PIPE/REP_PIP/g"
 #find ./ -type f -print0 | xargs -0 sed -i "s/GUID/ANGID/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/SetupAES/InstallAES/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/SessionKey/SeSSKey/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/SetupAES/InstallerAES/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/SessionKey/CleSession/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/EncryptedChallenge/CryptageChallEnge/g"
 
-find ./ -type f -print0 | xargs -0 sed -i "s/DecryptedChallenges/DecryptageChallEnges/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/DecryptedChallenges/DecryptageDesChallenges/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/Stage0Body/PremierBody/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/Stage0Response/PremierResponse/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/Stage0Bytes/PremierBytes/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/Stage1Body/SeccondaryBody/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/Stage1Response/SeccondaryResponse/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/Stage1Bytes/SeccondaryBytes/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/Stage1Body/DeuxiemeBody/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/Stage1Response/DeuxiemeResponse/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/Stage1Bytes/DeuxiemeBytes/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/Stage2Body/TroisiemeBody/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/Stage2Response/TroisiemeResponse/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/Stage2Bytes/TroisiemeBytes/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/message64str/Transmet64str/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/messageBytes/Transmetbytes/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/message64str/MeSSaGe64str/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/messageBytes/MeSSaGebytes/g"
 
 find ./ -type f -print0 | xargs -0 sed -i "s/totalReadBytes/ToTalReaDBytes/g"
 #find ./ -type f -print0 | xargs -0 sed -i "s/inputStream/instream/g"
@@ -109,18 +111,18 @@ find ./ -type f -print0 | xargs -0 sed -i "s/PartiallyDecrypted/decryptagePartie
 find ./ -type f -print0 | xargs -0 sed -i "s/FullyDecrypted/decryptageComplet/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/compressedBytes/comprimebytes/g"
 
-find ./ -type f -print0 | xargs -0 sed -i "s/CookieWebClient/AxionsWebClient/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/CookieWebClient/NagasWebClient/g"
 #find ./ -type f -print0 | xargs -0 sed -i "s/CookieContainer/KekseContains/g"
 #find ./ -type f -print0 | xargs -0 sed -i "s/GetWebRequest/DoAnWebReq/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/Jitter/JItTer/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/ConnectAttempts/ConneCTAttEmpTs/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/RegisterBody/RegistreBody/g"
 find ./ -type f -name "*.cs" -print0 | xargs -0 sed -i "s/messenger/MeSsenGer/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/Hello World/Its me, Booba/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/ValidateCert/ValiderLeCerT/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/Hello World/Its me, nobody/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/ValidateCert/ValiderLeCerTif/g"
 find ./ -type f -print0 | xargs -0 sed -i "s/UseCertPinning/UtiliseCertPin/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/EncryptedMessage/CryptMsg/g"
-find ./ -type f -print0 | xargs -0 sed -i "s/cookieWebClient/AxionWebClient/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/EncryptedMessage/MessageCrypte/g"
+find ./ -type f -print0 | xargs -0 sed -i "s/cookieWebClient/nagaWebClient/g"
 find ./ -type f -name "*.cs" -print0 | xargs -0 sed -i "s/aes/cryptvar/g"
 find ./ -type f -name "*.cs" -print0 | xargs -0 sed -i "s/aes2/cryptvar2/g"
 find ./ -type f -name "*.cs" -print0 | xargs -0 sed -i "s/array5/arr5/g"
@@ -148,26 +150,26 @@ find ./ -type f -name "*.cs" -print0 | xargs -0 sed -i "s/group8/grp8/g"
 
 
 find ./ -type f -name "*Grunt*" | while read FILE ; do
-	newfile="$(echo ${FILE} |sed -e "s/Grunt/Axion/g")";
+	newfile="$(echo ${FILE} |sed -e "s/Grunt/Naga/g")";
 	mv "${FILE}" "${newfile}";
 done
 find ./ -type f -name "*GRUNT*" | while read FILE ; do
-	newfile="$(echo ${FILE} |sed -e "s/GRUNT/AXION/g")";
+	newfile="$(echo ${FILE} |sed -e "s/GRUNT/NAGA/g")";
 	mv "${FILE}" "${newfile}";
 done
 
 find ./ -type f -name "*grunt*" | while read FILE ; do
-	newfile="$(echo ${FILE} |sed -e "s/grunt/axion/g")";
+	newfile="$(echo ${FILE} |sed -e "s/grunt/naga/g")";
 	mv "${FILE}" "${newfile}";
 done
 
 find ./ -type f -name "*Covenant*" | while read FILE ; do
-	newfile="$(echo ${FILE} |sed -e "s/Covenant/Tachyon/g")";
+	newfile="$(echo ${FILE} |sed -e "s/Covenant/Venom/g")";
 	mv "${FILE}" "${newfile}";
 done
 
 find ./ -type f -name "*COVENANT*" | while read FILE ; do
-	newfile="$(echo ${FILE} |sed -e "s/COVENANT/TACHYON/g")";
+	newfile="$(echo ${FILE} |sed -e "s/COVENANT/VENOM/g")";
 	mv "${FILE}" "${newfile}";
 done
 

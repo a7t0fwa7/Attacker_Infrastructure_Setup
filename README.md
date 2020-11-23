@@ -9,7 +9,7 @@ PS > . { Invoke-WebRequest -useb https://boxstarter.org/bootstrapper.ps1 } | iex
 Once the installation has completed, a Boxstarter Shell icon will appear on your desktop.  Launch the Boxstarter Shell and enter the following commands:
 
 PS > $Cred = Get-Credential $env:USERNAME
-PS > Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/ZeroPointSecurity/RTOVMSetup/master/win10.choco -Credential $Cred
+PS > Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/artofwar2306/Attack_Infra_Setup/master/.choco -Credential $Cred
 
 Once the Boxstarter packages have been installed, install the three Visual Studio applications in your Downloads folder.  When installing Visual Studio Community edition, select the .NET and C++ Desktop Development Environments from the main Workloads menu, then find and select the Windows XP v141 tools from the Individual components menu.
 

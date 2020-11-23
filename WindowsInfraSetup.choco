@@ -48,6 +48,29 @@ git clone https://github.com/p3nt4/PowerShdll.git C:\tools\PowerShdll
 git clone https://github.com/FortyNorthSecurity/Egress-Assess.git C:\tools\Egress-Assess
 git clone --recursive https://github.com/0xd4d/dnSpy.git C:\tools\dnSpy
 git clone https://github.com/leechristensen/SpoolSample.git C:\tools\SpoolSample
+git clone https://github.com/itm4n/PrivescCheck.git C:\tools\PrivescCheck
+git clone https://github.com/aloksaurabh/OffenPowerSh.git C:\tools\OffenPowerSh
+git clone https://github.com/artofwar2306/Invoke-Recon.git C:\tools\Invoke-Recon
+git clone https://github.com/danielbohannon/Invoke-Obfuscation.git C:\tools\Invoke-Obfuscation
+git clone https://github.com/CBHue/PyFuscation.git C:\tools\PyFuscation
+git clone https://github.com/tokyoneon/Chimera.git C:\tools\Chimera
+git clone https://github.com/S3cur3Th1sSh1t/WinPwn.git C:\tools\WinPWn
+git clone https://github.com/S3cur3Th1sSh1t/PowerSharpPack.git C:\tools\PowerSharpPack
+git clone https://github.com/S3cur3Th1sSh1t/MailSniper.git C:\tools\MailSniper
+git clone https://github.com/S3cur3Th1sSh1t/Creds.git C:\tools\Creds
+git clone https://github.com/S3cur3Th1sSh1t/Invoke-PrintDemon.git C:\tools\Invoke-PrintDemon
+git clone https://github.com/S3cur3Th1sSh1t/Invoke-SharpLoader.git C:\tools\Invoke-SharpLoader
+git clone https://github.com/S3cur3Th1sSh1t/Invoke-Sharpcradle.git C:\tools\Invoke-SharpCradle
+git clone https://github.com/S3cur3Th1sSh1t/Get-System-Techniques.git C:\tools\Get-System-Techniques
+git clone https://github.com/S3cur3Th1sSh1t/SharpLocker.git C:\tools\SharpLocker
+git clone https://github.com/S3cur3Th1sSh1t/xencrypt.git C:\tools\xencrypt
+git clone https://github.com/Flangvik/SimpleSourceProtector.git C:\tools\SimpleSourceProtector
+git clone https://github.com/SnaffCon/Snaffler.git C:\tools\Snaffler
+git clone https://github.com/Soledge/BlockEtw.git C:\tools\BlockEtw
+git clone https://github.com/jxy-s/herpaderping.git C:\tools\herpaderping
+git clone https://github.com/bytecod3r/Cobaltstrike-Aggressor-Scripts-Collection.git C:\tools\CobaltStrike-Agressor-Scripts-Collection
+git clone https://github.com/bats3c/darkarmour.git C:\tools\darkarmour
+
 
 # IE first run
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer"
@@ -95,7 +118,7 @@ Install-ChocolateyShortcut -shortcutFilePath "C:\Users\Public\Desktop\tools.lnk"
 Install-ChocolateyShortcut -shortcutFilePath "C:\Users\Public\Desktop\Neo4j.lnk" -targetPath "C:\tools\Neo4j\bin\neo4j.bat" -arguments "console" -runAsAdmin
 
 New-Item -Path C:\ -Name BGInfo -ItemType Directory -ErrorAction SilentlyContinue
-Invoke-WebRequest -Uri 'https://github.com/ZeroPointSecurity/RTOVMSetup/raw/master/wallpaper.jpg' -OutFile "C:\BGInfo\wallpaper.jpg"
+#Invoke-WebRequest -Uri 'https://github.com/ZeroPointSecurity/RTOVMSetup/raw/master/wallpaper.jpg' -OutFile "C:\BGInfo\wallpaper.jpg"
 Invoke-WebRequest -Uri 'https://github.com/ZeroPointSecurity/RTOVMSetup/raw/master/bginfo.bgi' -OutFile "C:\BGInfo\bginfo.bgi"
 New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\ -Name BGInfo -Value "C:\tools\sysinternals\Bginfo64.exe /accepteula /iC:\BGInfo\bginfo.bgi /timer:0"
 

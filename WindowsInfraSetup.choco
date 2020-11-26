@@ -79,6 +79,10 @@ git clone https://github.com/GhostPack/Seatbelt.git C:\tools\Seatbelt
 git clone https://github.com/GhostPack/Rubeus.git C:\tools\Rubeus
 git clone https://github.com/GhostPack/SharpDPAPI.git C:\tools\SharpDPAPI
 git clone https://github.com/GhostPack/SharpWMI.git C:\tools\SharpWMI
+git clone https://github.com/GhostPack/SharpDump.git C:\tools\SharpDump
+git clone https://github.com/GhostPack/SafetyKatz.git C:tools\SafetyKatz
+git clone 
+
 # IE first run
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer"
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main"

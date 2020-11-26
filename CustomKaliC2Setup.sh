@@ -49,6 +49,7 @@ sudo git clone https://github.com/Soledge/BlockEtw.git /opt/BlockEtw
 sudo git clone https://github.com/jxy-s/herpaderping.git /opt/herpaderping
 sudo git clone https://github.com/bytecod3r/Cobaltstrike-Aggressor-Scripts-Collection.git /opt/CobaltStrike-Agressor-Scripts-Collection
 sudo git clone https://github.com/bats3c/darkarmour.git /opt/darkarmour
+sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /opt/WinAndLinPEAS
 
 
 sudo gem install evil-winrm

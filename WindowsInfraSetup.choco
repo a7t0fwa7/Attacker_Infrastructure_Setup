@@ -74,8 +74,11 @@ git clone https://github.com/RythmStick/AMSITrigger.git C:\tools\AMSITrigger
 git clone https://github.com/rasta-mouse/ThreatCheck.git C:tools\ThreatCheck
 git clone https://github.com/mkaring/ConfuserEx.git C:\tools\ConfuserEx
 git clone https://github.com/whitehat-zero/PowEnum.git C:\tools\PowEnum
-git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git C:\WinAndLinPEAS
-
+git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git C:\tools\WinAndLinPEAS
+git clone https://github.com/GhostPack/Seatbelt.git C:\tools\Seatbelt
+git clone https://github.com/GhostPack/Rubeus.git C:\tools\Rubeus
+git clone https://github.com/GhostPack/SharpDPAPI.git C:\tools\SharpDPAPI
+git clone https://github.com/GhostPack/SharpWMI.git C:\tools\SharpWMI
 # IE first run
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer"
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main"

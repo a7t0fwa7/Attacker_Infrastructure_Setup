@@ -74,6 +74,7 @@ git clone https://github.com/RythmStick/AMSITrigger.git C:\tools\AMSITrigger
 git clone https://github.com/rasta-mouse/ThreatCheck.git C:tools\ThreatCheck
 git clone https://github.com/mkaring/ConfuserEx.git C:\tools\ConfuserEx
 git clone https://github.com/whitehat-zero/PowEnum.git C:\tools\PowEnum
+git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git C:\WinAndLinPEAS
 
 # IE first run
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer"

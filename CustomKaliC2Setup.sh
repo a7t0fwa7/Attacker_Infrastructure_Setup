@@ -51,7 +51,7 @@ sudo git clone https://github.com/bytecod3r/Cobaltstrike-Aggressor-Scripts-Colle
 sudo git clone https://github.com/bats3c/darkarmour.git /opt/darkarmour
 sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /opt/WinAndLinPEAS
 sudo git clone https://github.com/bitsadmin/wesng.git /opt/WinExploitSuggestorNextGen
-
+sudo git clone https://github.com/samratashok/ADModule.git /opt/ADModule
 sudo gem install evil-winrm
 
 sudo git clone --recurse-submodules https://github.com/cobbr/Covenant /opt/Covenant

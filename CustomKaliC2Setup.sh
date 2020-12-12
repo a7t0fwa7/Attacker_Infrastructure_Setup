@@ -54,7 +54,7 @@ sudo git clone https://github.com/bitsadmin/wesng.git /opt/WinExploitSuggestorNe
 sudo git clone https://github.com/samratashok/ADModule.git /opt/ADModule
 sudo gem install evil-winrm
 
-sudo git clone --recurse-submodules https://github.com/cobbr/Covenant /opt/Covenant
+sudo git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Covenant
 
 cd /opt/Covenant/Covenant/
 

@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# Create Static IPs in VM
 sudo apt -y update
 sudo apt -y install iptables-persistent netfilter-persistent python3-pip
 
@@ -14,6 +16,7 @@ sudo systemctl enable netfilter-persistent.service
 
 sudo sed -i "s/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g" /etc/sysctl.conf
 
+#Install microsoft dotnet sdk 3.1
 wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt -y update
@@ -22,6 +25,15 @@ sudo apt -y update
 sudo apt -y install dotnet-sdk-3.1
 rm packages-microsoft-prod.deb
 
+#Install Docker for Debian Buster and enable it (not opesec safe but practical for my usage)
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list 
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io -y 
+#sudo systemctl start docker
+sudo systemctl enable docker
+
+#Create directories
 sudo mkdir /opt/Intel-Tools
 sudo mkdir /opt/Command-and-Control
 sudo mkdir /opt/Reverse-Engineering
@@ -30,6 +42,7 @@ sudo mkdir /opt/Offensive-Tools
 sudo mkdir /opt/AV-Evasion-Tools
 sudo mkdir /opt/Useful-Lists
 
+#Download and Install tools of the trade
 sudo git clone https://github.com/danielmiessler/SecLists.git /opt/Useful-Lists/SecLists
 sudo git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /opt/Useful-Lists/PayloadsAllTheThings
 sudo git clone https://github.com/rbsec/dnscan.git /opt/Intel-Tools/dnscan
@@ -63,8 +76,17 @@ sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scrip
 sudo git clone https://github.com/bitsadmin/wesng.git /opt/Offensive-Tools/WinExploitSuggestorNextGen
 sudo git clone https://github.com/samratashok/ADModule.git /opt/Offensive-Tools/ADModule
 sudo gem install evil-winrm
+# Install CrackMapExec for Kali
+sudo apt install crackmapexec
+#Install CME in Docker
+sudo docker run -it --entrypoint=/bin/sh --name crackmapexec -v ~/.cme:/root/.cme byt3bl33d3r/crackmapexec
+#After exiting your container, you can restart it using the following command:
+#docker start crackmapexec
+#docker exec -it crackmapexec sh
 
-sudo git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Covenant
+
+# Install Custom Covenant
+sudo git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Command-and-Control/Covenant
 
 cd /opt/Covenant/Covenant/
 
@@ -217,6 +239,11 @@ mv ../ReferenceSourceLibraries/ ./Data/
 mv ../EmbeddedResources/ ./Data/ 
 
 dotnet build
+
+# Build Shadow C2
+sudo git clone --recurse-submodules https://github.com/bats3c/shad0w.git /opt/Command-and-Control/shad0w
+cd shad0w
+sudo ./shad0w install
 
 sudo systemctl enable ssh.service
 

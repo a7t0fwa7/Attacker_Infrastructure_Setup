@@ -22,36 +22,46 @@ sudo apt -y update
 sudo apt -y install dotnet-sdk-3.1
 rm packages-microsoft-prod.deb
 
-sudo git clone https://github.com/rbsec/dnscan.git /opt/dnscan
-sudo git clone https://github.com/chinarulezzz/spoofcheck /opt/spoofcheck; cd /opt/spoofcheck; sudo pip3 install -r requirements.txt
+sudo mkdir /opt/Intel-Tools
+sudo mkdir /opt/Command-and-Control
+sudo mkdir /opt/Reverse-Engineering
+sudo mkdir /opt/Obfuscation-Tools
+sudo mkdir /opt/Offensive-Tools
+sudo mkdir /opt/AV-Evasion-Tools
+sudo mkdir /opt/Useful-Lists
+
+sudo git clone https://github.com/danielmiessler/SecLists.git /opt/Useful-Lists/SecLists
+sudo git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /opt/Useful-Lists/PayloadsAllTheThings
+sudo git clone https://github.com/rbsec/dnscan.git /opt/Intel-Tools/dnscan
+sudo git clone https://github.com/chinarulezzz/spoofcheck /opt/Intel-Tools/spoofcheck; cd /opt/spoofcheck; sudo pip3 install -r requirements.txt
 sudo git clone https://gist.github.com/superkojiman/11076951 /opt/namemash; sudo chmod +x /opt/namemash/namemash.py
 sudo git clone https://github.com/byt3bl33d3r/SprayingToolkit.git /opt/SprayingToolkit; cd /opt/SprayingToolkit; sudo pip3 install -r requirements.txt
 sudo git clone https://github.com/FortyNorthSecurity/Egress-Assess.git /opt/Egress-Assess
-sudo git clone https://github.com/itm4n/PrivescCheck.git /opt/PrivescCheck
-sudo git clone https://github.com/aloksaurabh/OffenPowerSh.git /opt/OffenPowerSh
-sudo git clone https://github.com/artofwar2306/Invoke-Recon.git /opt/Invoke-Recon
-sudo git clone https://github.com/danielbohannon/Invoke-Obfuscation.git /opt/Invoke-Obfuscation
-sudo git clone https://github.com/CBHue/PyFuscation.git /opt/PyFuscation
-sudo git clone https://github.com/tokyoneon/Chimera.git /opt/Chimera
-sudo git clone https://github.com/S3cur3Th1sSh1t/WinPwn.git /opt/WinPWn
-sudo git clone https://github.com/S3cur3Th1sSh1t/PowerSharpPack.git /opt/PowerSharpPack
-sudo git clone https://github.com/S3cur3Th1sSh1t/MailSniper.git /opt/MailSniper
-sudo git clone https://github.com/S3cur3Th1sSh1t/Creds.git /opt/Creds
-sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-PrintDemon.git /opt/Invoke-PrintDemon
-sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-SharpLoader.git /opt/Invoke-SharpLoader
-sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-Sharpcradle.git /opt/Invoke-SharpCradle
-sudo git clone https://github.com/S3cur3Th1sSh1t/Get-System-Techniques.git /opt/Get-System-Techniques
-sudo git clone https://github.com/S3cur3Th1sSh1t/SharpLocker.git /opt/SharpLocker
-sudo git clone https://github.com/S3cur3Th1sSh1t/xencrypt.git /opt/xencrypt
-sudo git clone https://github.com/Flangvik/SimpleSourceProtector.git /opt/SimpleSourceProtector
-sudo git clone https://github.com/SnaffCon/Snaffler.git /opt/Snaffler
-sudo git clone https://github.com/Soledge/BlockEtw.git /opt/BlockEtw
-sudo git clone https://github.com/jxy-s/herpaderping.git /opt/herpaderping
-sudo git clone https://github.com/bytecod3r/Cobaltstrike-Aggressor-Scripts-Collection.git /opt/CobaltStrike-Agressor-Scripts-Collection
-sudo git clone https://github.com/bats3c/darkarmour.git /opt/darkarmour
-sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /opt/WinAndLinPEAS
-sudo git clone https://github.com/bitsadmin/wesng.git /opt/WinExploitSuggestorNextGen
-sudo git clone https://github.com/samratashok/ADModule.git /opt/ADModule
+sudo git clone https://github.com/itm4n/PrivescCheck.git /opt/Intel-Tools/PrivescCheck
+sudo git clone https://github.com/aloksaurabh/OffenPowerSh.git /opt/Offensive-Tools/OffenPowerSh
+sudo git clone https://github.com/artofwar2306/Invoke-Recon.git /opt/Intel-Tools/Invoke-Recon
+sudo git clone https://github.com/danielbohannon/Invoke-Obfuscation.git /opt/Obfuscation-Tools/Invoke-Obfuscation
+sudo git clone https://github.com/CBHue/PyFuscation.git /opt/Obfuscation-Tools/PyFuscation
+sudo git clone https://github.com/tokyoneon/Chimera.git /opt/Obfuscation-Tools/Chimera
+sudo git clone https://github.com/S3cur3Th1sSh1t/WinPwn.git /opt/Offensive-Tools/WinPWn
+sudo git clone https://github.com/S3cur3Th1sSh1t/PowerSharpPack.git /opt/Offensive-Tools/PowerSharpPack
+sudo git clone https://github.com/S3cur3Th1sSh1t/MailSniper.git /opt/Intel-Tools/MailSniper
+sudo git clone https://github.com/S3cur3Th1sSh1t/Creds.git /opt/Offensive-Tools/Creds
+sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-PrintDemon.git /opt/Offensive-Tools/Invoke-PrintDemon
+sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-SharpLoader.git /opt/Offensive-Tools/Invoke-SharpLoader
+sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-Sharpcradle.git /opt/Offensive-Tools/Invoke-SharpCradle
+sudo git clone https://github.com/S3cur3Th1sSh1t/Get-System-Techniques.git /opt/Offensive-Tools/Get-System-Techniques
+sudo git clone https://github.com/S3cur3Th1sSh1t/SharpLocker.git /opt/Offensive-Tools/SharpLocker
+sudo git clone https://github.com/S3cur3Th1sSh1t/xencrypt.git /opt/Obfuscation-Tools/xencrypt
+sudo git clone https://github.com/Flangvik/SimpleSourceProtector.git /opt/Obfuscation-Tools/SimpleSourceProtector
+sudo git clone https://github.com/SnaffCon/Snaffler.git /opt/Intel-Tools/Snaffler
+sudo git clone https://github.com/Soledge/BlockEtw.git /opt/AV-Evasion-Tools/BlockEtw
+sudo git clone https://github.com/jxy-s/herpaderping.git /opt/Offensive-Tools/herpaderping
+sudo git clone https://github.com/bytecod3r/Cobaltstrike-Aggressor-Scripts-Collection.git /opt/Offensive-Tools/CobaltStrike-Agressor-Scripts-Collection
+sudo git clone https://github.com/bats3c/darkarmour.git /opt/AV-Evasion-Tools/darkarmour
+sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /opt/Offensive-Tools/WinAndLinPEAS
+sudo git clone https://github.com/bitsadmin/wesng.git /opt/Offensive-Tools/WinExploitSuggestorNextGen
+sudo git clone https://github.com/samratashok/ADModule.git /opt/Offensive-Tools/ADModule
 sudo gem install evil-winrm
 
 sudo git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Covenant

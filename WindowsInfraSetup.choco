@@ -98,6 +98,10 @@ Invoke-WebRequest -Uri 'https://neo4j.com/artifact.php?name=neo4j-community-4.0.
 Expand-Archive -Path "$env:TEMP\neo4j.zip" -DestinationPath C:\tools\
 Rename-Item -Path C:\tools\neo4j-community-4.0.0\ -NewName Neo4j
 
+# CrackMapExecBinary
+Invoke-WebRquest -Uri 'https://github.com/byt3bl33d3r/CrackMapExec/releases/download/v5.1.1dev/cme-windows-latest.1.zip' -OutFile "$env:TEMP\CrackMapExec.zip"
+Expand-Archive -Path "$env:TEMP\CrackMapExec.zip" -DestinationPath C:\tools
+
 ## Visual Studio
 $html = (New-Object Net.WebClient).DownloadString('https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16')
 $url = [regex]::Match($html, '(https).*(vs_Community.exe)').Captures.Groups[0].Value

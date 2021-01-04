@@ -89,7 +89,7 @@ sudo docker run -it --entrypoint=/bin/sh --name crackmapexec -v ~/.cme:/root/.cm
 # Install Custom Covenant
 sudo git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Command-and-Control/Covenant
 
-cd /opt/Covenant/Covenant/
+cd /opt/Command-and-Control/Covenant/Covenant/
 
 mv ./Data/AssemblyReferences/ ../AssemblyReferences/
 

@@ -47,9 +47,9 @@ sudo git clone https://github.com/ropnop/kerbrute.git /opt/Intel-Tools/kerbrute
 sudo git clone https://github.com/danielmiessler/SecLists.git /opt/Useful-Lists/SecLists
 sudo git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /opt/Useful-Lists/PayloadsAllTheThings
 sudo git clone https://github.com/rbsec/dnscan.git /opt/Intel-Tools/dnscan
-sudo git clone https://github.com/chinarulezzz/spoofcheck /opt/Intel-Tools/spoofcheck; cd /opt/spoofcheck; sudo pip3 install -r requirements.txt
+sudo git clone https://github.com/chinarulezzz/spoofcheck /opt/Intel-Tools/spoofcheck; cd /opt/Intel-Tools/spoofcheck; sudo pip3 install -r requirements.txt
 sudo git clone https://gist.github.com/superkojiman/11076951 /opt/namemash; sudo chmod +x /opt/namemash/namemash.py
-sudo git clone https://github.com/byt3bl33d3r/SprayingToolkit.git /opt/SprayingToolkit; cd /opt/SprayingToolkit; sudo pip3 install -r requirements.txt
+sudo git clone https://github.com/byt3bl33d3r/SprayingToolkit.git /opt/Intel-Tools/SprayingToolkit; cd /opt/Inten-Tools/SprayingToolkit; sudo pip3 install -r requirements.txt
 sudo git clone https://github.com/FortyNorthSecurity/Egress-Assess.git /opt/Egress-Assess
 sudo git clone https://github.com/itm4n/PrivescCheck.git /opt/Intel-Tools/PrivescCheck
 sudo git clone https://github.com/aloksaurabh/OffenPowerSh.git /opt/Offensive-Tools/OffenPowerSh

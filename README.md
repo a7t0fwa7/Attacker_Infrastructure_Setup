@@ -1,6 +1,13 @@
+# Kali Install
 Just Git clone it and install on Kali
+```
+sudo git clone <blah>
 
-## For Windows :
+chmod +x <blah>
+  
+./<blah>
+```
+# For Windows :
 
 On the Windows VM, open a PowerShell prompt as Administrator and run:
 1) ```PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted```

@@ -80,7 +80,7 @@ sudo gem install evil-winrm
 # Install CrackMapExec for Kali
 sudo apt install crackmapexec
 #Install CME in Docker
-sudo docker run -it --entrypoint=/bin/sh --name crackmapexec -v ~/.cme:/root/.cme byt3bl33d3r/crackmapexec
+#sudo docker run -it --entrypoint=/bin/sh --name crackmapexec -v ~/.cme:/root/.cme byt3bl33d3r/crackmapexec
 #After exiting your container, you can restart it using the following command:
 #docker start crackmapexec
 #docker exec -it crackmapexec sh

@@ -3,8 +3,9 @@ Just Git clone it and install on Kali
 ## For Windows :
 
 On the Windows VM, open a PowerShell prompt as Administrator and run:
+1) ```PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted```
 
-```PS > . { Invoke-WebRequest -useb https://boxstarter.org/bootstrapper.ps1 } | iex; Get-Boxstarter -Force'''```
+2) ```PS > . { Invoke-WebRequest -useb https://boxstarter.org/bootstrapper.ps1 } | iex; Get-Boxstarter -Force```
 
 Once the installation has completed, a Boxstarter Shell icon will appear on your desktop.  Launch the Boxstarter Shell and enter the following commands:
 

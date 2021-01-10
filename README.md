@@ -1,6 +1,11 @@
 # Kali Install
 Just Git clone it and install on Kali
 ```
+curl -sS https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/CustomKaliC2andToolsSetup.sh | sudo bash -
+
+```
+
+```
 sudo git clone <blah>
 
 chmod +x <blah>

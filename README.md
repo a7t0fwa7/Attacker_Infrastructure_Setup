@@ -1,18 +1,12 @@
 # Kali Install
+
 Just Git clone it and install on Kali
 ```
 curl -sS https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/CustomKaliC2andToolsSetup.sh | sudo bash -
 
 ```
 
-```
-sudo git clone <blah>
-
-chmod +x <blah>
-  
-./<blah>
-```
-# For Windows :
+# Windows Install
 
 On the Windows VM, open a PowerShell prompt as Administrator and run:
 1) ```PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted```

@@ -30,7 +30,7 @@ Once the installation has completed, a Boxstarter Shell icon will appear on your
 
 1) ``` $Cred = Get-Credential $env:USERNAME ```
 
-2) ``` Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/artofwar2306/RTOVMSetup/master/setup -Credential $Cred ```
+2) ``` Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/a7t0fwa7/RTOVMSetup/master/win10.choco -Credential $Cred ```
 
 Once the Boxstarter packages have been installed, install the three Visual Studio applications in your Downloads folder.  When installing Visual Studio Community edition, select the .NET and C++ Desktop Development Environments from the main Workloads menu, then find and select the Windows XP v141 tools from the Individual components menu.
 

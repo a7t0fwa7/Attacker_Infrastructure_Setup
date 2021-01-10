@@ -85,6 +85,8 @@ sudo apt install crackmapexec
 #docker start crackmapexec
 #docker exec -it crackmapexec sh
 
+# Download Mythic C2
+sudo git clone git clone https://github.com/its-a-feature/Mythic /opt/Command-and-Control/Mythic
 
 # Install Custom Covenant
 sudo git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Command-and-Control/Covenant

@@ -15,7 +15,7 @@ Log out and log back in as root
 4) Kali Infrastructure Script to download and install
 
 ```
-curl -sS https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/CustomKaliC2andToolsSetup.sh | sudo bash -
+curl -sS https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/CustomKaliC2andToolsSetup.sh | sudo bash 
 
 ```
 

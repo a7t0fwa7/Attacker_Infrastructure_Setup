@@ -50,6 +50,7 @@ sudo mkdir /opt/AV-Evasion-Tools
 sudo mkdir /opt/Useful-Lists
 
 #Download and Install tools of the trade
+sudo git clone https://github.com/sevagas/macro_pack.git /opt/Offensive-Tools/Macro_Pack
 sudo git clone https://github.com/ropnop/kerbrute.git /opt/Intel-Tools/kerbrute
 sudo git clone https://github.com/danielmiessler/SecLists.git /opt/Useful-Lists/SecLists
 sudo git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git /opt/Useful-Lists/PayloadsAllTheThings

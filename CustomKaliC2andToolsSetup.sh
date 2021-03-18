@@ -97,8 +97,8 @@ sudo apt install crackmapexec
 sudo git clone git clone https://github.com/its-a-feature/Mythic /opt/Command-and-Control/Mythic
 
 # Install Custom Covenant
-sudo git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Command-and-Control/Covenant
-
+sudo git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Command-and-Control/CovenantModified
+#sudo git clone --recurse-submodules https://github.com/cobbr/Covenant.git /opt/Command-and-Control/CovenantModified
 cd /opt/Command-and-Control/Covenant/Covenant/
 
 mv ./Data/AssemblyReferences/ ../AssemblyReferences/

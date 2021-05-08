@@ -18,6 +18,25 @@ Log out and log back in as root
 curl -sS https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/CustomKaliC2andToolsSetup.sh | sudo bash -
 
 ```
+5) Allow root to access SSH
+
+- Open sshd_config file
+`nano /etc/ssh/sshd_config`
+
+- FInd the Authentication section and modify the line 
+`PermitRootLogin yes`
+
+- Save an exit
+
+- Restart ssh server:
+`systemctl restart sshd`
+
+
+## Alternative Kali Install
+
+Download PimpmyKali from `https://github.com/Dewalt-arch/pimpmykali.git` follow instructions
+
+To Launch: `sudo bash pimpmykali.sh`
 
 # Windows Install
 
@@ -30,7 +49,7 @@ Once the installation has completed, a Boxstarter Shell icon will appear on your
 
 1) ``` $Cred = Get-Credential $env:USERNAME ```
 
-2) ``` Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/a7t0fwa7/RTOVMSetup/master/win10.choco -Credential $Cred ```
+2) ``` Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/win10.choco ```
 
 Once the Boxstarter packages have been installed, install the three Visual Studio applications in your Downloads folder.  When installing Visual Studio Community edition, select the .NET and C++ Desktop Development Environments from the main Workloads menu, then find and select the Windows XP v141 tools from the Individual components menu.
 

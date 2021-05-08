@@ -29,7 +29,7 @@ curl -sS https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/Cust
 - Save an exit
 
 - Restart ssh server:
-`systemctl restart sshd`
+`systemctl restart sshd` or `service sshd restart`
 
 
 ## Alternative Kali Install

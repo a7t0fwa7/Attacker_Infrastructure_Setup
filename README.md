@@ -18,12 +18,12 @@ Log out and log back in as root
 curl -sS https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/CustomKaliC2andToolsSetup.sh | sudo bash -
 
 ```
-5) Allow root to access SSH
+5) Allow SSH as root
 
 - Open sshd_config file
 `nano /etc/ssh/sshd_config`
 
-- FInd the Authentication section and modify the line 
+- Find the Authentication section and modify the line 
 `PermitRootLogin yes`
 
 - Save an exit

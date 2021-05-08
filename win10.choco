@@ -47,7 +47,38 @@ git clone https://github.com/rasta-mouse/Watson.git C:\tools\Watson
 git clone https://github.com/tevora-threat/SharpView.git C:\tools\SharpView
 git clone https://github.com/TheWover/donut.git C:\tools\donut
 git clone https://github.com/ZeroPointSecurity/PhishingTemplates.git C:\tools\PhishingTemplates
-
+git clone https://github.com/Flangvik/AMSI.fail.git C:\tools\AMSIfail
+git clone https://github.com/sevagas/macro_pack.git C:\tools\Offensive-Tools\Macro_Pack
+git clone https://github.com/ropnop/kerbrute.git C:\tools\Intel-Tools\kerbrute
+git clone https://github.com/danielmiessler/SecLists.git C;\tools\Useful-Lists\SecLists
+git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git C:\tools\Useful-Lists\PayloadsAllTheThings
+git clone https://github.com/rbsec/dnscan.git C:\tools\Intel-Tools\dnscan
+git clone https://github.com/FortyNorthSecurity/Egress-Assess.git C:\tools\Egress-Assess
+git clone https://github.com/itm4n/PrivescCheck.git C:\tools\Intel-Tools\PrivescCheck
+git clone https://github.com/aloksaurabh/OffenPowerSh.git C:\tools\Offensive-Tools\OffenPowerSh
+git clone https://github.com/artofwar2306/Invoke-Recon.git C:\tools\Intel-Tools\Invoke-Recon
+git clone https://github.com/danielbohannon/Invoke-Obfuscation.git C:\tools\Obfuscation-Tools\Invoke-Obfuscation
+git clone https://github.com/CBHue/PyFuscation.git C:\tools\Obfuscation-Tools\PyFuscation
+git clone https://github.com/tokyoneon/Chimera.git C:\tools\Obfuscation-Tools\Chimera
+git clone https://github.com/S3cur3Th1sSh1t/WinPwn.git C:\tools\Offensive-Tools\WinPWn
+git clone https://github.com/S3cur3Th1sSh1t/PowerSharpPack.git C:\tools\Offensive-Tools\PowerSharpPack
+#sudo git clone https://github.com/S3cur3Th1sSh1t/MailSniper.git /opt/Intel-Tools/MailSniper
+#sudo git clone https://github.com/S3cur3Th1sSh1t/Creds.git /opt/Offensive-Tools/Creds
+#sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-PrintDemon.git /opt/Offensive-Tools/Invoke-PrintDemon
+#sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-SharpLoader.git /opt/Offensive-Tools/Invoke-SharpLoader
+#sudo git clone https://github.com/S3cur3Th1sSh1t/Invoke-Sharpcradle.git /opt/Offensive-Tools/Invoke-SharpCradle
+#sudo git clone https://github.com/S3cur3Th1sSh1t/Get-System-Techniques.git /opt/Offensive-Tools/Get-System-Techniques
+#sudo git clone https://github.com/S3cur3Th1sSh1t/SharpLocker.git /opt/Offensive-Tools/SharpLocker
+#sudo git clone https://github.com/S3cur3Th1sSh1t/xencrypt.git /opt/Obfuscation-Tools/xencrypt
+#sudo git clone https://github.com/Flangvik/SimpleSourceProtector.git /opt/Obfuscation-Tools/SimpleSourceProtector
+#sudo git clone https://github.com/SnaffCon/Snaffler.git /opt/Intel-Tools/Snaffler
+#sudo git clone https://github.com/Soledge/BlockEtw.git /opt/AV-Evasion-Tools/BlockEtw
+#sudo git clone https://github.com/jxy-s/herpaderping.git /opt/Offensive-Tools/herpaderping
+#sudo git clone https://github.com/bytecod3r/Cobaltstrike-Aggressor-Scripts-Collection.git /opt/Offensive-Tools/CobaltStrike-Agressor-Scripts-Collection
+#sudo git clone https://github.com/bats3c/darkarmour.git /opt/AV-Evasion-Tools/darkarmour
+#sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /opt/Offensive-Tools/WinAndLinPEAS
+#sudo git clone https://github.com/bitsadmin/wesng.git /opt/Offensive-Tools/WinExploitSuggestorNextGen
+#sudo git clone https://github.com/samratashok/ADModule.git /opt/Offensive-Tools/ADModule
 # IE first run
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer"
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main"

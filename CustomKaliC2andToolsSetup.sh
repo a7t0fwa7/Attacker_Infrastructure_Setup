@@ -10,9 +10,12 @@ sudo service networking restart
 
 sudo sed -i "s/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g" /etc/sysctl.conf
 
-#sudo sysctl -w net.ipv4.ip_forward=1
+sudo sysctl net.ipv4.ip_forward=1
 
+#Forward Windows Traffic to Kali tun0 VPN tunnel
 sudo iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
+sudo iptables -A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+sudo iptables -A FORWARD -i eth1 -o tun0 -j ACCEPT
 sudo netfilter-persistent save
 sudo systemctl enable netfilter-persistent.service
 

@@ -89,6 +89,10 @@ sudo git clone https://github.com/bats3c/darkarmour.git /opt/AV-Evasion-Tools/da
 sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /opt/Offensive-Tools/WinAndLinPEAS
 sudo git clone https://github.com/bitsadmin/wesng.git /opt/Offensive-Tools/WinExploitSuggestorNextGen
 sudo git clone https://github.com/samratashok/ADModule.git /opt/Offensive-Tools/ADModule
+
+#Download and install Obfuscated Mimikatz
+curl -s https://gist.githubusercontent.com/a7t0fwa7/94591fe57d330cafbc89a349dc05c0e2/raw/dafbd32d1307c4ebb512e4eb7c43c7e1292bcac9/ObfuscateMimi_First.sh | bash
+
 sudo gem install evil-winrm
 # Install CrackMapExec for Kali
 sudo apt install crackmapexec

@@ -21,7 +21,7 @@ choco install heidisql --version=10.2.0.559900
 choco install openjdk11
 choco install putty
 choco install sysinternals --params "/InstallDir:C:\tools\sysinternals"
-##choco install vscode
+choco install vscode
 
 # GitHub
 Invoke-WebRequest -Uri https://github.com/dnSpy/dnSpy/releases/latest/download/dnSpy-netframework.zip -OutFile "$env:TEMP\dnSpy-netframework.zip"

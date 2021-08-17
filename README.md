@@ -51,6 +51,8 @@ Once the installation has completed, a Boxstarter Shell icon will appear on your
 
 2) ``` Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/win10.choco ```
 
+**NOTE** If your download fails copy the token attached at the end of the URI.
+
 Once the Boxstarter packages have been installed, install the three Visual Studio applications in your Downloads folder.  When installing Visual Studio Community edition, select the .NET and C++ Desktop Development Environments from the main Workloads menu, then find and select the Windows XP v141 tools from the Individual components menu.
 
 Then perform one final manual reboot.

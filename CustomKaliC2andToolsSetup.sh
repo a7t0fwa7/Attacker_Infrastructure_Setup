@@ -55,6 +55,26 @@ sudo mkdir /opt/AV-Evasion-Tools
 sudo mkdir /opt/Useful-Lists
 
 #Download and Install tools of the trade
+sudo git clone https://github.com/fox-it/aclpwn.py.git /opt/Offensive-Tools/aclpwn
+sudo git clone https://github.com/fox-it/Invoke-CredentialPhisher.git /opt/Offensive/Tools/Invoke-CredentialPhisher
+sudo git clone https://github.com/xforcered/InlineExecute-Assembly.git /opt/Offensive-Tools/InlineExecute-Assembly
+sudo git clone https://github.com/ORCA666/EVA2.git /opt/AV-Evasion-Tools/EVA2
+sudo git clone https://github.com/N4kedTurtle/HellsGatePoC.git /opt/AV-Evasion-Tools/HellsGatePoC
+sudo git clone https://github.com/3gstudent/Invoke-BuildAnonymousSMBServer.git /opt/Offensive-Tools/Invoke-BuildAnonymousSMBServer
+sudo git clone https://github.com/BC-SECURITY/Offensive-VBA-and-XLS-Entanglement.git /opt/Offensive-Tools/Offensive-VBA-and-XLS-Entanglement
+sudo git clone https://github.com/AnErrupTion/LoGiC.NET.git /opt/Obfuscation-Tools/LoGIC.NET
+sudo git clone https://github.com/r00t-3xp10it/meterpeter.git /opt/Command-and-Control/Powershell-Meterpreter
+sudo git clone https://github.com/GossiTheDog/HiveNightmare.git /Offensive-Tools/HiveNightmare
+sudo git clone https://github.com/Inf0secRabbit/BadAssMacros.git /Offensive-Tools/BadAssMacros
+sudo git clone https://github.com/d35ha/CallObfuscator.git /opt/Obfuscation-Tools/CallObfuscator
+sudo git clone https://github.com/bats3c/ADCSPwn.git /opt/Offensive-Tools/ADCSPwn
+sudo git clone https://github.com/ShutdownRepo/targetedKerberoast.git /opt/Offensive-Tools/targetedKerberoast
+sudo git clone https://github.com/topotam/PetitPotam.git /opt/Offensive-Tools/PetitPotam
+sudo git clone https://github.com/Flangvik/DeployPrinterNightmare.git /opt/Offensive-Tools/DeployPrintNightMare
+sudo git clone https://github.com/two06/Inception.git /opt/AV-Evasion-Tools/Inception
+sudo git clone https://github.com/cube0x0/MiniDump.git /opt/Offensive-Tools/MiniDump
+sudo git clone https://github.com/xp4xbox/Python-Backdoor.git /opt/Command-and-Control/Python-Backdoor
+sudo git clone https://github.com/xp4xbox/PyEvade.git /opt/Obfuscation-Tools/PyEvade
 sudo git clone https://github.com/sevagas/macro_pack.git /opt/Offensive-Tools/Macro_Pack
 sudo git clone https://github.com/ropnop/kerbrute.git /opt/Intel-Tools/kerbrute
 sudo git clone https://github.com/danielmiessler/SecLists.git /opt/Useful-Lists/SecLists
@@ -90,9 +110,15 @@ sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scrip
 sudo git clone https://github.com/bitsadmin/wesng.git /opt/Offensive-Tools/WinExploitSuggestorNextGen
 sudo git clone https://github.com/samratashok/ADModule.git /opt/Offensive-Tools/ADModule
 
+# Install BloodHound
+sudo apt install bloodhound
+# Install Custom Queries for BloodHound
+$ curl -o "~/.config/bloodhound/customqueries.json" "https://raw.githubusercontent.com/CompassSecurity/BloodHoundQueries/master/customqueries.json"
+
 #Download and install Obfuscated Mimikatz
 curl -s https://gist.githubusercontent.com/a7t0fwa7/94591fe57d330cafbc89a349dc05c0e2/raw/dafbd32d1307c4ebb512e4eb7c43c7e1292bcac9/ObfuscateMimi_First.sh | bash
 
+# Install Evil-WinRM
 sudo gem install evil-winrm
 # Install CrackMapExec for Kali
 sudo apt install crackmapexec

@@ -113,6 +113,9 @@ sudo git clone https://github.com/bats3c/darkarmour.git /opt/AV-Evasion-Tools/da
 sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git /opt/Offensive-Tools/WinAndLinPEAS
 sudo git clone https://github.com/bitsadmin/wesng.git /opt/Offensive-Tools/WinExploitSuggestorNextGen
 sudo git clone https://github.com/samratashok/ADModule.git /opt/Offensive-Tools/ADModule
+sudo git clone https://github.com/dosxuz/DefenderStop.git /opt/AV-Evasion-Tools/DefenderStop
+sudo git clone https://github.com/Ignitetechnologies/Credential-Dumping.git /opt/Offensive-Tools/CredDump
+
 
 # Install Cloud Analysis tools
 sudo git clone https://github.com/RhinoSecurityLabs/GCP-IAM-Privilege-Escalation.git /opt/Cloud/GCP-IAM-Priv-Esc
@@ -128,6 +131,10 @@ sudo git clone https://github.com/darkquasar/AzureHunter.git /opt/Cloud/Azure_Fo
 sudo git clone https://github.com/TROUBLE-1/Vajra.git /opt/Cloud/Azure_Vajra_Attack_Framework
 sudo git clone https://github.com/rkemery/bash-gcp-buckets-public.git /opt/Cloud/GCP_Enum_Buckets
 sudo git clone https://github.com/RhinoSecurityLabs/pacu.git /opt/Cloud/AWS_Exploitation_Framework_Pacu
+sudo git clone https://github.com/BishopFox/smogcloud.git /opt/Cloud/AWS_SmogCloud
+sudo git clone https://github.com/accurics/terrascan.git /opt/Cloud/IaaC_TerraScan
+sudo git clone https://github.com/FSecureLABS/leonidas.git /opt/Cloud/AWS_AttackSim_Framework_Leonidas
+
 
 
 # Install BloodHound

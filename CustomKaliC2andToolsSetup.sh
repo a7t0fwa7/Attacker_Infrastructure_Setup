@@ -30,6 +30,9 @@ sudo apt -y update
 sudo apt -y install dotnet-sdk-3.1
 rm packages-microsoft-prod.deb
 
+# Install Mingw-w64
+sudo apt install mingw-w64
+
 #Install Docker for Debian Buster and enable it (not opesec safe but practical for my usage)
 sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list 
@@ -53,6 +56,7 @@ sudo mkdir /opt/Obfuscation-Tools
 sudo mkdir /opt/Offensive-Tools
 sudo mkdir /opt/AV-Evasion-Tools
 sudo mkdir /opt/Useful-Lists
+sudo mkdir /opt/Cloud
 
 #Download and Install tools of the trade
 sudo git clone https://github.com/fox-it/aclpwn.py.git /opt/Offensive-Tools/aclpwn
@@ -110,6 +114,22 @@ sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scrip
 sudo git clone https://github.com/bitsadmin/wesng.git /opt/Offensive-Tools/WinExploitSuggestorNextGen
 sudo git clone https://github.com/samratashok/ADModule.git /opt/Offensive-Tools/ADModule
 
+# Install Cloud Analysis tools
+sudo git clone https://github.com/RhinoSecurityLabs/GCP-IAM-Privilege-Escalation.git /opt/Cloud/GCP-IAM-Priv-Esc
+sudo git clone https://github.com/RhinoSecurityLabs/CloudScraper.git /opt/Cloud/CloudScraper
+sudo git clone https://github.com/RhinoSecurityLabs/GCPBucketBrute.git /opt/Cloud/GCPBucketBrute
+sudo git clone https://github.com/ZarvisD/Azure-AD.git /opt/Cloud/Azure-AD
+sudo git clone https://github.com/nccgroup/PMapper.git /opt/Cloud/AWS_PMapper
+sudo git clone https://github.com/nccgroup/ScoutSuite.git /opt/Cloud/MultiCloud_ScoutSuite
+sudo git clone https://github.com/NetSPI/MicroBurst.git /opt/Cloud/Azure_MicroBurst
+sudo git clone https://github.com/sa7mon/S3Scanner.git /opt/Cloud/AWS_S3Scanner
+sudo git clone https://github.com/aquasecurity/cloudsploit.git /opt/Cloud/MultiCloud_CloudSploit
+sudo git clone https://github.com/darkquasar/AzureHunter.git /opt/Cloud/Azure_Forensics_AzureHunter
+sudo git clone https://github.com/TROUBLE-1/Vajra.git /opt/Cloud/Azure_Vajra_Attack_Framework
+sudo git clone https://github.com/rkemery/bash-gcp-buckets-public.git /opt/Cloud/GCP_Enum_Buckets
+sudo git clone https://github.com/RhinoSecurityLabs/pacu.git /opt/Cloud/AWS_Exploitation_Framework_Pacu
+
+
 # Install BloodHound
 sudo apt install bloodhound
 # Install Custom Queries for BloodHound
@@ -127,6 +147,9 @@ sudo apt install crackmapexec
 #After exiting your container, you can restart it using the following command:
 #docker start crackmapexec
 #docker exec -it crackmapexec sh
+
+# Download Sliver C2
+sudo git clone https://github.com/BishopFox/sliver.git /opt/Command-and-Control/Sliver
 
 # Download Mythic C2
 sudo git clone git clone https://github.com/its-a-feature/Mythic /opt/Command-and-Control/Mythic

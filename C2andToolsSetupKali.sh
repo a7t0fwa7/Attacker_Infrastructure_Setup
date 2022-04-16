@@ -20,6 +20,30 @@ sudo netfilter-persistent save
 sudo systemctl enable netfilter-persistent.service
 
 
+# Check if command line tools are installed
+  if [[ -x "$(command -v go)" ]]; then
+    echo -e '[+] Go is installed.'
+  else
+    echo -e "[-] Go is not installed.\n[+] Installing Go..."
+    # Install Package
+    wget https://golang.org/dl/go1.18.1.linux-amd64.tar.gz /root/Downloads/
+    tar -xvf go1.18.1.linux-amd64.tar.gz -C /usr/local
+    chown -R root:root /usr/local/go
+
+    #Add GOPATH to .profile
+    echo "export GOPATH=$HOME/go" >> $HOME/.profile
+    echo "export PATH=$PATH=$GOPATH/bin" >> $HOME/.profile
+    # Reload .profile
+    source ~/.profile
+    
+    # Add GOPATH to .bashrc
+    echo "GOROOT=/usr/lib/go" >> $HOME/.zshrc
+    echo "GOPATH=$HOME/go" >> $HOME/.zshrc
+    echo "PATH=$GOPATH/bin:$GOROOT/bin:$PATH" >> $HOME/.zshrc
+    # Reload .zshrc
+    source ~/.zshrc
+  fi
+
 
 #Install microsoft dotnet sdk 3.1
 wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
@@ -48,6 +72,9 @@ echo "deb https://download.mono-project.com/repo/debian vs-buster main" | sudo t
 sudo apt update
 sudo apt install monodevelop
 
+# Install SMAP
+go install -v github.com/s0md3v/smap/cmd/smap@latest
+
 #Create directories
 sudo mkdir /opt/Intel-Tools
 sudo mkdir /opt/Command-and-Control
@@ -59,6 +86,12 @@ sudo mkdir /opt/Useful-Lists
 sudo mkdir /opt/Cloud
 
 #Download and Install tools of the trade
+sudo git clone https://github.com/MrTuxx/SocialPwned.git /opt/Intel-Tools/SocialPwned
+sudo git clone https://github.com/cmars/onionpipe.git /opt/Offensive-Tools/tunneling_onionpipe
+sudo git clone https://github.com/irsdl/IIS-ShortName-Scanner.git /opt/Intel-Tools/IIS-ShortName-Scanner
+sudo git clone https://github.com/v4d1/Dome.git /opt/Intel-Tools/SubDomainEnum_Dome
+sudo git clone https://github.com/whydee86/ComPP.git /opt/Intel-Tools/Password_Gen_ComPP
+sudo git clone https://github.com/Taonn/EmailAll.git /opt/Intel-Tools/EmailAll
 sudo git clone https://github.com/fox-it/aclpwn.py.git /opt/Offensive-Tools/aclpwn
 sudo git clone https://github.com/fox-it/Invoke-CredentialPhisher.git /opt/Offensive/Tools/Invoke-CredentialPhisher
 sudo git clone https://github.com/xforcered/InlineExecute-Assembly.git /opt/Offensive-Tools/InlineExecute-Assembly
@@ -68,8 +101,8 @@ sudo git clone https://github.com/3gstudent/Invoke-BuildAnonymousSMBServer.git /
 sudo git clone https://github.com/BC-SECURITY/Offensive-VBA-and-XLS-Entanglement.git /opt/Offensive-Tools/Offensive-VBA-and-XLS-Entanglement
 sudo git clone https://github.com/AnErrupTion/LoGiC.NET.git /opt/Obfuscation-Tools/LoGIC.NET
 sudo git clone https://github.com/r00t-3xp10it/meterpeter.git /opt/Command-and-Control/Powershell-Meterpreter
-sudo git clone https://github.com/GossiTheDog/HiveNightmare.git /Offensive-Tools/HiveNightmare
-sudo git clone https://github.com/Inf0secRabbit/BadAssMacros.git /Offensive-Tools/BadAssMacros
+sudo git clone https://github.com/GossiTheDog/HiveNightmare.git /opt/Offensive-Tools/HiveNightmare
+sudo git clone https://github.com/Inf0secRabbit/BadAssMacros.git /opt/Offensive-Tools/BadAssMacros
 sudo git clone https://github.com/d35ha/CallObfuscator.git /opt/Obfuscation-Tools/CallObfuscator
 sudo git clone https://github.com/bats3c/ADCSPwn.git /opt/Offensive-Tools/ADCSPwn
 sudo git clone https://github.com/ShutdownRepo/targetedKerberoast.git /opt/Offensive-Tools/targetedKerberoast
@@ -140,7 +173,13 @@ sudo git clone https://github.com/FSecureLABS/leonidas.git /opt/Cloud/AWS_Attack
 # Install BloodHound
 sudo apt install bloodhound
 # Install Custom Queries for BloodHound
-$ curl -o "~/.config/bloodhound/customqueries.json" "https://raw.githubusercontent.com/CompassSecurity/BloodHoundQueries/master/customqueries.json"
+#$ curl -o "~/.config/bloodhound/customqueries.json" "https://raw.githubusercontent.com/CompassSecurity/BloodHoundQueries/master/customqueries.json"
+$ curl -o "~/.config/bloodhound/customqueries.json" "https://raw.githubusercontent.com/ZephrFish/Bloodhound-CustomQueries/main/customqueries.json"
+
+# Install ADalanche
+sudo git clone https://github.com/lkarlslund/adalanche.git /opt/Intel-Tools/ActiveDirectoryAdalanche
+cd adalanche
+bash build.sh
 
 #Download and install Obfuscated Mimikatz
 curl -s https://gist.githubusercontent.com/a7t0fwa7/94591fe57d330cafbc89a349dc05c0e2/raw/dafbd32d1307c4ebb512e4eb7c43c7e1292bcac9/ObfuscateMimi_First.sh | bash

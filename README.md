@@ -41,9 +41,11 @@ To Launch: `sudo bash pimpmykali.sh`
 # Windows Install
 
 On the Windows VM, open a PowerShell prompt as Administrator and run:
-1) ```PS C:\Windows\system32> Set-ExecutionPolicy Unrestricted```
+1) ```C:\Windows\system32> Set-ExecutionPolicy Unrestricted```
 
-2) ```PS > . { Invoke-WebRequest -useb https://boxstarter.org/bootstrapper.ps1 } | iex; Get-Boxstarter -Force```
+2) ```. { Invoke-WebRequest -useb https://boxstarter.org/bootstrapper.ps1 } | iex; Get-Boxstarter -Force```
+3) If step 2 doesn't work try this:
+```Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://boxstarter.org/bootstrapper.ps1')); Get-Boxstarter -Force```
 
 Once the installation has completed, a Boxstarter Shell icon will appear on your desktop.  Launch the Boxstarter Shell and enter the following commands:
 

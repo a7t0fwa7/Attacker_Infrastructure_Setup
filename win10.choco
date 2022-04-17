@@ -9,6 +9,7 @@ $Downloads = Get-ItemPropertyValue 'HKCU:\software\microsoft\windows\currentvers
 Add-MpPreference -ExclusionPath $Downloads
 Add-MpPreference -ExclusionPath "C:\payloads\"
 Add-MpPreference -ExclusionPath "C:\tools\"
+Add-MpPreference -ExclusionPath "P:\"
 Set-MpPreference -MAPSReporting Disabled
 Set-MpPreference -SubmitSamplesConsent NeverSend
 
@@ -16,8 +17,8 @@ Set-MpPreference -SubmitSamplesConsent NeverSend
 choco feature enable -n allowGlobalConfirmation
 choco install 7zip
 choco install git
-## choco install googlechrome --ignore-checksums
-choco install heidisql --version=10.2.0.559900
+choco install googlechrome --ignore-checksums
+choco install heidisql
 choco install openjdk11
 choco install putty
 choco install sysinternals --params "/InstallDir:C:\tools\sysinternals"
@@ -27,6 +28,46 @@ choco install vscode
 Invoke-WebRequest -Uri https://github.com/dnSpy/dnSpy/releases/latest/download/dnSpy-netframework.zip -OutFile "$env:TEMP\dnSpy-netframework.zip"
 Expand-Archive -Path "$env:TEMP\dnSpy-netframework.zip" -DestinationPath C:\tools\dnSpy
 
+git clone https://github.com/lengjibo/RedTeamTools.git C:\tools\RedTeamTools
+git clone https://github.com/aaaddress1/xlsKami.git C:\tools\ShenHaoMaXlsKami
+git clone https://github.com/aaaddress1/Windows-APT-Warfare.git C:\tools\Windows-APT-Warfare
+git clone https://github.com/aaaddress1/PR0CESS.git C:\tools\ShenHaoMaPR0CESS
+git clone https://github.com/aaaddress1/Skrull.git C:\tools\ShenHaoMaSkrull
+git clone https://github.com/timwhitez/Doge-RecycledGate.git C:\tools\Doge-RecycledGate
+git clone https://github.com/cube0x0/SyscallPack.git C:\tools\SyscallPack
+git clone https://github.com/klezVirus/SysWhispers3.git C:\tools\SysWhispers3 
+git clone https://github.com/DarkCoderSc/PowerRunAsAttached.git C:\tools\DarkCoderPowerRunAsAttached
+git clone https://github.com/DarkCoderSc/PowerRemoteDesktop.git C:\tools\DarkCoderPowerRemoteDesktop
+git clone https://github.com/DarkCoderSc/PowerRunAsSystem.git C:\tools\DarkCoderPowerRunAsSystem
+git clone https://github.com/ly4k/SpoolFool.git C:\tools\SpoolFool
+git clone https://github.com/wavestone-cdt/Invoke-CleverSpray.git C:\tools\Invoke-CleverSpray
+git clone https://github.com/Inf0secRabbit/BadAssMacros.git C:\tools\BadAssMacros
+git clone https://github.com/sbasu7241/HellsGate.git C:\tools\HellsGate
+git clone https://github.com/Ignitetechnologies/Credential-Dumping.git C:\tools\Credential-Dumping
+git clone https://github.com/Idov31/FunctionStomping.git C:\tools\FunctionStomping
+git clone https://github.com/safe6Sec/GolangBypassAV.git C:\tools\GolangBypassAV
+git clone https://github.com/last-byte/DefenderSwitch.git C:\tools\DefenderSwitch
+git clone https://github.com/mitchmoser/LACheck.git C:\tools\LocalAdminPrivEscChecker
+git clone https://github.com/mgeeky/o365enum.git C:\tools\MGeekys_o365enum
+git clone https://github.com/mgeeky/polonium.git C:\tools\MGeekys_map_out_AVs_EDRs_detection_surface_to_identify_their_gaps.
+git clone https://github.com/mgeeky/VisualBasicObfuscator.git C:\tools\MGeekys_VB_Obfuscator_unmaintained
+git clone https://github.com/mgeeky/Stracciatella.git C:\tools\MGeekys_Strcciatella 
+git clone https://github.com/mgeeky/ProtectMyTooling.git C:\tools\MGeekys_ProtectMyTooling
+git clone https://github.com/mgeeky/mgeeky-gists.git C:\tools\MGeekys_Gists
+git clone https://github.com/mgeeky/Penetration-Testing-Tools.git C:\tools\MGeekys_Pentest_Tools
+git clone https://github.com/MrTuxx/SocialPwned.git C:\tools\SocialPwned
+git clone https://github.com/cmars/onionpipe.git C:\tools\tunneling_onionpipe
+git clone https://github.com/irsdl/IIS-ShortName-Scanner.git C:\tools\IIS-ShortName-Scanner
+git clone https://github.com/v4d1/Dome.git C:\tools\SubDomainEnum_Dome
+git clone https://github.com/whydee86/ComPP.git C:\tools\Password_Gen_ComPP
+git clone https://github.com/Taonn/EmailAll.git C:\tools\EmailAll
+git clone https://github.com/fox-it/aclpwn.py.git C:\tools\aclpwn
+git clone https://github.com/fox-it/Invoke-CredentialPhisher.git C:\tools\Invoke-CredentialPhisher
+git clone https://github.com/xforcered/InlineExecute-Assembly.git C:\tools\InlineExecute-Assembly
+git clone https://github.com/ORCA666/EVA2.git C:\tools\EVA2
+git clone https://github.com/N4kedTurtle/HellsGatePoC.git C:\tools\HellsGatePoC
+git clone https://github.com/3gstudent/Invoke-BuildAnonymousSMBServer.git C:\tools\Invoke-BuildAnonymousSMBServer
+git clone https://github.com/BC-SECURITY/Offensive-VBA-and-XLS-Entanglement.git C:\tools\Offensive-VBA-and-XLS-Entanglement
 git clone https://github.com/fox-it/aclpwn.py.git C:\tools\aclpwn
 git clone https://github.com/fox-it/Invoke-CredentialPhisher.git C:\tools\Invoke-CredentialPhisher
 git clone https://github.com/xforcered/InlineExecute-Assembly.git C:\tools\InlineExecute-Assembly
@@ -122,15 +163,20 @@ Invoke-WebRequest -Uri 'https://neo4j.com/artifact.php?name=neo4j-community-4.0.
 Expand-Archive -Path "$env:TEMP\neo4j.zip" -DestinationPath C:\tools\
 Rename-Item -Path C:\tools\neo4j-community-4.0.0\ -NewName Neo4j
 
+# Install Adalanche
+git clone https://github.com/lkarlslund/adalanche C:\tools\adalanche
+cd C:\tools\adalanche\adalanche
+build.cmd
+
 ## Visual Studio
 #Invoke-WebRequest -Uri 'https://marketplace.visualstudio.com/_apis/public/gallery/publishers/VisualStudioClient/vsextensions/MicrosoftVisualStudio2017InstallerProjects/0.9.9/vspackage' -OutFile "$Downloads\InstallerProjects.vsix"
 #Invoke-WebRequest -Uri 'https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe' -OutFile "$Downloads\BuildTools.exe"
 #Enable-WindowsOptionalFeature -FeatureName NetFx3 -Online
 
 ## Visual Studio
-Invoke-WebRequest -Uri 'https://visualstudioclient.gallerycdn.vsassets.io/extensions/visualstudioclient/microsoftvisualstudio2017installerprojects/1.0.0/1620063166533/InstallerProjects.vsix' -OutFile "$Downloads\InstallerProjects.vsix"
-Invoke-WebRequest -Uri 'https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe' -OutFile "$Downloads\BuildTools.exe"
-Enable-WindowsOptionalFeature -FeatureName NetFx3 -Online
+#Invoke-WebRequest -Uri 'https://visualstudioclient.gallerycdn.vsassets.io/extensions/visualstudioclient/microsoftvisualstudio2017installerprojects/1.0.0/1620063166533/InstallerProjects.vsix' -OutFile "$Downloads\InstallerProjects.vsix"
+#Invoke-WebRequest -Uri 'https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe' -OutFile "$Downloads\BuildTools.exe"
+#Enable-WindowsOptionalFeature -FeatureName NetFx3 -Online
 
 # GPRegistryPolicy
 Install-Module GPRegistryPolicy -Force

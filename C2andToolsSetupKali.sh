@@ -84,8 +84,36 @@ sudo mkdir /opt/Offensive-Tools
 sudo mkdir /opt/AV-Evasion-Tools
 sudo mkdir /opt/Useful-Lists
 sudo mkdir /opt/Cloud
+sudo mkdir /opt/CheatSheets
 
 #Download and Install tools of the trade
+sudo git clone https://github.com/lengjibo/RedTeamTools.git /opt/Offensive-Tools/RedTeamTools
+sudo git clone https://github.com/aaaddress1/xlsKami.git /opt/AV-Evasion-Tools/ShenHaoMaXlsKami
+sudo git clone https://github.com/aaaddress1/Windows-APT-Warfare.git /opt/Cheatsheets/Windows-APT-Warfare
+sudo git clone https://github.com/aaaddress1/PR0CESS.git /opt/AV-Evasion-Tools/ShenHaoMaPR0CESS
+sudo git clone https://github.com/aaaddress1/Skrull.git /opt/AV-Evasion-Tools/ShenHaoMaSkrull
+sudo git clone https://github.com/timwhitez/Doge-RecycledGate.git /opt/Offensive-Tools/Doge-RecycledGate
+sudo git clone https://github.com/cube0x0/SyscallPack.git /opt/AV-Evasion-Tools/SyscallPack
+sudo git clone https://github.com/klezVirus/SysWhispers3.git /opt/AV-Evasion-Tools/SysWhispers3 
+sudo git clone https://github.com/DarkCoderSc/PowerRunAsAttached.git /opt/Offensive-Tools/DarkCoderPowerRunAsAttached
+sudo git clone https://github.com/DarkCoderSc/PowerRemoteDesktop.git /opt/Offensive-Tools/DarkCoderPowerRemoteDesktop
+sudo git clone https://github.com/DarkCoderSc/PowerRunAsSystem.git /opt/Offensive-Tools/DarkCoderPowerRunAsSystem
+sudo git clone https://github.com/ly4k/SpoolFool.git /opt/Offensive-Tools/SpoolFool
+sudo git clone https://github.com/wavestone-cdt/Invoke-CleverSpray.git /opt/Offensive-Tools/Invoke-CleverSpray
+sudo git clone https://github.com/Inf0secRabbit/BadAssMacros.git /opt/AV-Evasion-Tools/BadAssMacros
+sudo git clone https://github.com/sbasu7241/HellsGate.git /opt/AV-Evasion-Tools/HellsGate
+sudo git clone https://github.com/Ignitetechnologies/Credential-Dumping.git /opt/CheatSheets/Credential-Dumping
+sudo git clone https://github.com/Idov31/FunctionStomping.git /opt/AV-Evasion-Tools/FunctionStomping
+sudo git clone https://github.com/safe6Sec/GolangBypassAV.git /opt/AV-Evasion-Tools/GolangBypassAV
+sudo git clone https://github.com/last-byte/DefenderSwitch.git /opt/AV-Evasion-Tools/DefenderSwitch
+sudo git clone https://github.com/mitchmoser/LACheck.git /opt/Offensive-Tools/LocalAdminPrivEscChecker
+sudo git clone https://github.com/mgeeky/o365enum.git /opt/Intel-Tools/MGeekys_o365enum
+sudo git clone https://github.com/mgeeky/polonium.git /opt/AV-Evasion-Tools/MGeekys_map_out_AVs_EDRs_detection_surface_to_identify_their_gaps.
+sudo git clone https://github.com/mgeeky/VisualBasicObfuscator.git /opt/AV-Evasion-Tools/MGeekys_VB_Obfuscator_unmaintained
+sudo git clone https://github.com/mgeeky/Stracciatella.git /opt/AV-Evasion-Tools/MGeekys_Strcciatella 
+sudo git clone https://github.com/mgeeky/ProtectMyTooling.git /opt/Obfuscation-Tools/MGeekys_ProtectMyTooling
+sudo git clone https://github.com/mgeeky/mgeeky-gists.git /opt/Offensive-Tools/MGeekys_Gists
+sudo git clone https://github.com/mgeeky/Penetration-Testing-Tools.git /opt/Offensive-Tools/MGeekys_Pentest_Tools
 sudo git clone https://github.com/MrTuxx/SocialPwned.git /opt/Intel-Tools/SocialPwned
 sudo git clone https://github.com/cmars/onionpipe.git /opt/Offensive-Tools/tunneling_onionpipe
 sudo git clone https://github.com/irsdl/IIS-ShortName-Scanner.git /opt/Intel-Tools/IIS-ShortName-Scanner

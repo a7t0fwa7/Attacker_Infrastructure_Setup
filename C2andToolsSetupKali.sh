@@ -43,6 +43,18 @@ sudo systemctl enable netfilter-persistent.service
     # Reload .zshrc
     source ~/.zshrc
   fi
+  if [[ -x "$(command -v v)" ]]; then
+    echo -e '[+] Vlang is installed.'
+  else
+    echo -e "[-] Vlang is not installed.\n[+] Installing Vlang..."
+    # Download and Install Vlang
+    sudo git clone https://github.com/vlang/v
+    #sudo apt install build-essential
+    cd v
+    make
+    sudo ./v symlink
+  fi
+  
 
 
 #Install microsoft dotnet sdk 3.1
@@ -72,6 +84,9 @@ echo "deb https://download.mono-project.com/repo/debian vs-buster main" | sudo t
 sudo apt update
 sudo apt install monodevelop
 
+# Download VS Code
+sudo wget https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64
+
 # Install SMAP
 go install -v github.com/s0md3v/smap/cmd/smap@latest
 
@@ -87,6 +102,7 @@ sudo mkdir /opt/Cloud
 sudo mkdir /opt/CheatSheets
 
 #Download and Install tools of the trade
+sudo git clone https://github.com/3nock/sub3suite/releases/download/v0.0.3/sub3suite-v0.0.3-linux.tar.gz /opt/Intel-Tools/sub3suite 
 sudo git clone https://github.com/lengjibo/RedTeamTools.git /opt/Offensive-Tools/RedTeamTools
 sudo git clone https://github.com/aaaddress1/xlsKami.git /opt/AV-Evasion-Tools/ShenHaoMaXlsKami
 sudo git clone https://github.com/aaaddress1/Windows-APT-Warfare.git /opt/Cheatsheets/Windows-APT-Warfare

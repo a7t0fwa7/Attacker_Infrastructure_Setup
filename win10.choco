@@ -9,6 +9,7 @@ $Downloads = Get-ItemPropertyValue 'HKCU:\software\microsoft\windows\currentvers
 Add-MpPreference -ExclusionPath $Downloads
 Add-MpPreference -ExclusionPath "C:\payloads\"
 Add-MpPreference -ExclusionPath "C:\tools\"
+Add-MpPreference -ExclusionPath "C:\Users\a7t0fwa7"
 Add-MpPreference -ExclusionPath "P:\"
 Set-MpPreference -MAPSReporting Disabled
 Set-MpPreference -SubmitSamplesConsent NeverSend

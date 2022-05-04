@@ -19,11 +19,39 @@ choco feature enable -n allowGlobalConfirmation
 choco install 7zip
 choco install git
 choco install googlechrome --ignore-checksums
+choco install brave
 choco install heidisql
 choco install openjdk11
 choco install putty
 choco install sysinternals --params "/InstallDir:C:\tools\sysinternals"
 choco install vscode
+choco install foxitreader
+choco install python
+choco install pesieve
+choco install procexp
+choco install nmap
+choco install wget
+choco install curl
+choco install awscli
+choco install wireshark
+choco install golang
+choco install azure-cli
+choco install postman
+choco install calibre
+choco install kubernetes-cli
+choco install terraform
+choco install cmder
+choco install mingw
+choco install tor-browser
+choco install pip
+choco install procmon
+choco install psexec
+choco install signal
+choco install cherrytree
+choco install joplin
+choco install nugetpackagemanager
+choco install vscode-cloud-code
+
 
 # GitHub
 Invoke-WebRequest -Uri https://github.com/dnSpy/dnSpy/releases/latest/download/dnSpy-netframework.zip -OutFile "$env:TEMP\dnSpy-netframework.zip"
@@ -155,6 +183,10 @@ git clone https://github.com/rasta-mouse/ThreatCheck.git C:\tools\ThreatCheck
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer"
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main"
 New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main" -Name DisableFirstRunCustomize -Value 1
+
+# Download DLL Export Viewer
+Invoke-WebRequest -Uri 'https://www.nirsoft.net/utils/dllexp-x64.zip' -OutFile "$env:TEMP\dllexp.zip"
+Expand-Archive -Path "$env:TEMP\dllexp.zip" -DestinationPath C:\tools\
 
 # BloodHound
 Invoke-WebRequest -Uri 'https://github.com/BloodHoundAD/BloodHound/releases/latest/download/BloodHound-win32-x64.zip' -OutFile "$env:TEMP\BloodHound.zip"

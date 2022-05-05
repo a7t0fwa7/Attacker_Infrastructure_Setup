@@ -51,7 +51,7 @@ Once the installation has completed, a Boxstarter Shell icon will appear on your
 
 1) ``` $Cred = Get-Credential $env:USERNAME ```
 
-2) ``` Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/win10.choco?token=GHSAT0AAAAAABTR5FOW54Z3MUEYDH6TFJJSYS4ATDA ```
+2) ``` Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/windows.choco?token=ENTER THE TOKEN HERE ```
 
 **NOTE** If your download fails copy the token attached at the end of the URI.
 

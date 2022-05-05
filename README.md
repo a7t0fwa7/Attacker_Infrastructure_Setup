@@ -15,7 +15,7 @@ Log out and log back in as root
 4) Kali Infrastructure Script to download and install
 
 ```
-curl -sS https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/C2andToolsSetupKali.sh?token=GHSAT0AAAAAABTR5FOWKG2MLD5RLYGRQBU4YS4AWIQ | sudo bash -
+curl -sS https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/C2andToolsSetupKali.sh? | sudo bash -
 
 ```
 5) Allow SSH as root
@@ -47,14 +47,16 @@ On the Windows VM, open a PowerShell prompt as Administrator and run:
 3) If step 2 doesn't work try this:
 ```Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://boxstarter.org/bootstrapper.ps1')); Get-Boxstarter -Force```
 
-Once the installation has completed, a Boxstarter Shell icon will appear on your desktop.  Launch the **Boxstarter Shell** and enter the following commands:
+Once the installation has completed, a Boxstarter Shell icon will appear on your desktop.  
+
+## Launch the **Boxstarter Shell** and enter the following commands:
 
 1) ``` $Cred = Get-Credential $env:USERNAME ```
 
-2) ``` Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/windows.choco?token=ENTER THE TOKEN HERE ```
-**NOTE** If your download fails copy the token attached at the end of the URI.
+2) ``` Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/windows.choco```
 
-Launch Powershell config script
+
+## Launch Powershell config script
 3) ``` iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/windows.ps1'));-Force```
 
 4) If all the above fails then download files as ZIP and install locally

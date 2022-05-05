@@ -41,19 +41,25 @@ To Launch: `sudo bash pimpmykali.sh`
 # Windows Install
 
 On the Windows VM, open a PowerShell prompt as Administrator and run:
-1) ```C:\Windows\system32> Set-ExecutionPolicy Unrestricted```
+1) ```Set-ExecutionPolicy Unrestricted```
 
 2) ```. { Invoke-WebRequest -useb https://boxstarter.org/bootstrapper.ps1 } | iex; Get-Boxstarter -Force```
 3) If step 2 doesn't work try this:
 ```Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://boxstarter.org/bootstrapper.ps1')); Get-Boxstarter -Force```
 
-Once the installation has completed, a Boxstarter Shell icon will appear on your desktop.  Launch the Boxstarter Shell and enter the following commands:
+Once the installation has completed, a Boxstarter Shell icon will appear on your desktop.  Launch the **Boxstarter Shell** and enter the following commands:
 
 1) ``` $Cred = Get-Credential $env:USERNAME ```
 
 2) ``` Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/windows.choco?token=ENTER THE TOKEN HERE ```
-
 **NOTE** If your download fails copy the token attached at the end of the URI.
+
+Launch Powershell config script
+3) ``` iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/a7t0fwa7/Attack_Infra_Setup/main/windows.ps1'));-Force```
+
+4) If all the above fails then download files as ZIP and install locally
+
+
 
 Once the Boxstarter packages have been installed, install the three Visual Studio applications in your Downloads folder.  When installing Visual Studio Community edition, select the .NET and C++ Desktop Development Environments from the main Workloads menu, then find and select the Windows XP v141 tools from the Individual components menu.
 

@@ -148,7 +148,7 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main
 
 # Download DLL Export Viewer
 Invoke-WebRequest -Uri 'https://www.nirsoft.net/utils/dllexp-x64.zip' -OutFile "$env:TEMP\dllexp.zip"
-Expand-Archive -Path "$env:TEMP\dllexp.zip" -DestinationPath C:\tools\
+Expand-Archive -Path "$env:TEMP\dllexp.zip" -DestinationPath C:\tools\dllExportViewer
 
 # BloodHound
 Invoke-WebRequest -Uri 'https://github.com/BloodHoundAD/BloodHound/releases/latest/download/BloodHound-win32-x64.zip' -OutFile "$env:TEMP\BloodHound.zip"
@@ -174,9 +174,11 @@ build.cmd
 #Enable-WindowsOptionalFeature -FeatureName NetFx3 -Online
 
 ## Visual Studio
-#Invoke-WebRequest -Uri 'https://visualstudioclient.gallerycdn.vsassets.io/extensions/visualstudioclient/microsoftvisualstudio2017installerprojects/1.0.0/1620063166533/InstallerProjects.vsix' -OutFile "$Downloads\InstallerProjects.vsix"
-#Invoke-WebRequest -Uri 'https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe' -OutFile "$Downloads\BuildTools.exe"
-#Enable-WindowsOptionalFeature -FeatureName NetFx3 -Online
+Invoke-WebRequest -Uri 'https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false' -OutFile "$Downloads\VStudio.exe"
+
+Invoke-WebRequest -Uri 'https://visualstudioclient.gallerycdn.vsassets.io/extensions/visualstudioclient/microsoftvisualstudio2017installerprojects/1.0.0/1620063166533/InstallerProjects.vsix' -OutFile "$Downloads\InstallerProjects.vsix"
+Invoke-WebRequest -Uri 'https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe' -OutFile "$Downloads\BuildTools.exe"
+Enable-WindowsOptionalFeature -FeatureName NetFx3 -Online
 
 # GPRegistryPolicy
 Install-Module GPRegistryPolicy -Force

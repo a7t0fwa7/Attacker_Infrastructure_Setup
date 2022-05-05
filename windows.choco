@@ -52,11 +52,6 @@ choco install joplin
 choco install nugetpackagemanager
 choco install vscode-cloud-code
 
-
-# GitHub
-Invoke-WebRequest -Uri https://github.com/dnSpy/dnSpy/releases/latest/download/dnSpy-netframework.zip -OutFile "$env:TEMP\dnSpy-netframework.zip"
-Expand-Archive -Path "$env:TEMP\dnSpy-netframework.zip" -DestinationPath C:\tools\dnSpy
-
 git clone https://github.com/lengjibo/RedTeamTools.git C:\tools\RedTeamTools
 git clone https://github.com/aaaddress1/xlsKami.git C:\tools\ShenHaoMaXlsKami
 git clone https://github.com/aaaddress1/Windows-APT-Warfare.git C:\tools\Windows-APT-Warfare
@@ -179,6 +174,10 @@ git clone https://github.com/7Ragnarok7/Windows-Exploit-Suggester.git C:\tools\W
 git clone https://github.com/bitsadmin/wesng.git C:\tools\Windows-Exploit-Suggester-New-Generation
 git clone https://github.com/rasta-mouse/ThreatCheck.git C:\tools\ThreatCheck
 
+# DnSpy
+Invoke-WebRequest -Uri https://github.com/dnSpy/dnSpy/releases/latest/download/dnSpy-netframework.zip -OutFile "$env:TEMP\dnSpy-netframework.zip"
+Expand-Archive -Path "$env:TEMP\dnSpy-netframework.zip" -DestinationPath C:\tools\dnSpy
+
 # IE first run
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer"
 New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main"
@@ -186,7 +185,7 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Internet Explorer\Main
 
 # Download DLL Export Viewer
 Invoke-WebRequest -Uri 'https://www.nirsoft.net/utils/dllexp-x64.zip' -OutFile "$env:TEMP\dllexp.zip"
-Expand-Archive -Path "$env:TEMP\dllexp.zip" -DestinationPath C:\tools\
+Expand-Archive -Path "$env:TEMP\dllexp.zip" -DestinationPath C:\tools\dllExportViewer
 
 # BloodHound
 Invoke-WebRequest -Uri 'https://github.com/BloodHoundAD/BloodHound/releases/latest/download/BloodHound-win32-x64.zip' -OutFile "$env:TEMP\BloodHound.zip"

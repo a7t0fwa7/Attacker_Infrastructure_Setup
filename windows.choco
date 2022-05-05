@@ -19,7 +19,7 @@ choco feature enable -n allowGlobalConfirmation
 choco install 7zip
 choco install git
 choco install googlechrome --ignore-checksums
-choco install brave
+#choco install brave --ignore-checksums
 choco install heidisql
 choco install openjdk11
 choco install putty

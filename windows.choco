@@ -51,9 +51,16 @@ choco install cherrytree
 choco install joplin
 choco install nugetpackagemanager
 choco install vscode-cloud-code
-
-
-
+choco install mingw
+choco install codeblocks
+choco install notepadplusplus
+choco install ghidra
+choco install hxd
+choco install x64dbg.portable
+choco install visualstudio2022community
+choco install visualstudio2022-workload-manageddesktop
+choco install visualstudio2022-workload-vctools
+choco install vcredist140
 # Misc
 $DesktopPath = [Environment]::GetFolderPath("Desktop")
 Remove-Item -Path "C:\Users\Public\Desktop\Boxstarter Shell.lnk"

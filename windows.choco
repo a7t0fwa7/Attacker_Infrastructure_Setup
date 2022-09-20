@@ -15,6 +15,7 @@ $env:TMP = "C:\Temp"
 #Set-MpPreference -SubmitSamplesConsent NeverSend
 
 # Packages
+choco install termius
 choco install hollowshunter
 choco install pebear
 choco install radare2

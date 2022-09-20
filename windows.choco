@@ -15,6 +15,7 @@ $env:TMP = "C:\Temp"
 #Set-MpPreference -SubmitSamplesConsent NeverSend
 
 # Packages
+choco install pebear
 choco install ghidra
 choco install radare2
 choco feature enable -n allowGlobalConfirmation

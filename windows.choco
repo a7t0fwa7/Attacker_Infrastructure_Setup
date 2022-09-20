@@ -16,7 +16,6 @@ $env:TMP = "C:\Temp"
 
 # Packages
 choco install hollowshunter
-choco install pesieve
 choco install pebear
 choco install radare2
 choco feature enable -n allowGlobalConfirmation

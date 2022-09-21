@@ -174,10 +174,10 @@ build.cmd
 #Enable-WindowsOptionalFeature -FeatureName NetFx3 -Online
 
 ## Visual Studio
-Invoke-WebRequest -Uri 'https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false' -OutFile "$Downloads\VStudio.exe"
+#Invoke-WebRequest -Uri 'https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false' -OutFile "$Downloads\VStudio.exe"
 
-Invoke-WebRequest -Uri 'https://visualstudioclient.gallerycdn.vsassets.io/extensions/visualstudioclient/microsoftvisualstudio2017installerprojects/1.0.0/1620063166533/InstallerProjects.vsix' -OutFile "$Downloads\InstallerProjects.vsix"
-Invoke-WebRequest -Uri 'https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe' -OutFile "$Downloads\BuildTools.exe"
+#Invoke-WebRequest -Uri 'https://visualstudioclient.gallerycdn.vsassets.io/extensions/visualstudioclient/microsoftvisualstudio2017installerprojects/1.0.0/1620063166533/InstallerProjects.vsix' -OutFile "$Downloads\InstallerProjects.vsix"
+#Invoke-WebRequest -Uri 'https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe' -OutFile "$Downloads\BuildTools.exe"
 Enable-WindowsOptionalFeature -FeatureName NetFx3 -Online
 
 # GPRegistryPolicy
@@ -207,6 +207,6 @@ Invoke-WebRequest -Uri 'https://github.com/a7t0fwa7/Attack_Infra_Setup/raw/maste
 New-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\ -Name BGInfo -Value "C:\tools\sysinternals\Bginfo64.exe /accepteula /iC:\BGInfo\bginfo.bgi /timer:0"
 
 # Misc
-$DesktopPath = [Environment]::GetFolderPath("Desktop")
-Remove-Item -Path "C:\Users\Public\Desktop\Boxstarter Shell.lnk"
-Remove-Item -Path C:\Temp\ -Recurse -Force
+#$DesktopPath = [Environment]::GetFolderPath("Desktop")
+#Remove-Item -Path "C:\Users\Public\Desktop\Boxstarter Shell.lnk"
+#Remove-Item -Path C:\Temp\ -Recurse -Force

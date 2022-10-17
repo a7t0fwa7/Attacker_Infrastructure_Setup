@@ -15,6 +15,7 @@ $env:TMP = "C:\Temp"
 #Set-MpPreference -SubmitSamplesConsent NeverSend
 
 # Packages
+choco install pestudio
 choco install openjdk
 choco install graphviz
 choco install github-desktop

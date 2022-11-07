@@ -15,6 +15,7 @@ $env:TMP = "C:\Temp"
 #Set-MpPreference -SubmitSamplesConsent NeverSend
 
 # Packages
+
 choco install regshot
 choco install fakenet
 choco install pestudio
@@ -61,6 +62,7 @@ choco install cherrytree
 choco install joplin
 choco install nugetpackagemanager
 choco install vscode-cloud-code
+choco install vscode-ansible
 choco install mingw
 choco install codeblocks
 choco install notepadplusplus

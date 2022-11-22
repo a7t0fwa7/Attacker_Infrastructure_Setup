@@ -15,7 +15,7 @@ $env:TMP = "C:\Temp"
 #Set-MpPreference -SubmitSamplesConsent NeverSend
 
 # Packages
-
+choco install jregexanalyser
 choco install regshot
 choco install fakenet
 choco install pestudio

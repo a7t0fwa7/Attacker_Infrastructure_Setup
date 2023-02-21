@@ -15,6 +15,7 @@ $env:TMP = "C:\Temp"
 #Set-MpPreference -SubmitSamplesConsent NeverSend
 
 # Packages
+choco install reshack
 choco install winapioverride
 choco install apimonitor
 choco install jregexanalyser

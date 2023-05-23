@@ -101,7 +101,7 @@ sudo mkdir /opt/Useful-Lists
 sudo mkdir /opt/Cloud
 sudo mkdir /opt/CheatSheets
 
-#Download and Install tools of the trade
+#Download tools of the trade
 sudo git clone https://github.com/3nock/sub3suite/releases/download/v0.0.3/sub3suite-v0.0.3-linux.tar.gz /opt/Intel-Tools/sub3suite 
 sudo git clone https://github.com/lengjibo/RedTeamTools.git /opt/Offensive-Tools/RedTeamTools
 sudo git clone https://github.com/aaaddress1/xlsKami.git /opt/AV-Evasion-Tools/ShenHaoMaXlsKami
@@ -194,7 +194,7 @@ sudo git clone https://github.com/dosxuz/DefenderStop.git /opt/AV-Evasion-Tools/
 sudo git clone https://github.com/Ignitetechnologies/Credential-Dumping.git /opt/Offensive-Tools/CredDump
 
 
-# Install Cloud Analysis tools
+# Download Cloud Analysis tools
 sudo git clone https://github.com/RhinoSecurityLabs/GCP-IAM-Privilege-Escalation.git /opt/Cloud/GCP-IAM-Priv-Esc
 sudo git clone https://github.com/RhinoSecurityLabs/CloudScraper.git /opt/Cloud/CloudScraper
 sudo git clone https://github.com/RhinoSecurityLabs/GCPBucketBrute.git /opt/Cloud/GCPBucketBrute
@@ -245,8 +245,8 @@ sudo git clone https://github.com/BishopFox/sliver.git /opt/Command-and-Control/
 sudo git clone git clone https://github.com/its-a-feature/Mythic /opt/Command-and-Control/Mythic
 
 # Install Custom Covenant
-sudo git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Command-and-Control/CovenantModified
-#sudo git clone --recurse-submodules https://github.com/cobbr/Covenant.git /opt/Command-and-Control/CovenantModified
+#sudo git clone --recurse-submodules https://github.com/ZeroPointSecurity/Covenant.git /opt/Command-and-Control/CovenantModified
+sudo git clone --recurse-submodules https://github.com/cobbr/Covenant.git /opt/Command-and-Control/CovenantModified
 cd /opt/Command-and-Control/CovenantModified/Covenant/
 
 mv ./Data/AssemblyReferences/ ../AssemblyReferences/

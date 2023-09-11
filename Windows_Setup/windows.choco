@@ -76,6 +76,7 @@ choco install visualstudio2022community
 choco install visualstudio2022-workload-manageddesktop
 choco install visualstudio2022-workload-vctools
 choco install vcredist140
+choco install anaconda3
 # Misc
 $DesktopPath = [Environment]::GetFolderPath("Desktop")
 Remove-Item -Path "C:\Users\Public\Desktop\Boxstarter Shell.lnk"

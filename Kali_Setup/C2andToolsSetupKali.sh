@@ -75,8 +75,9 @@ sudo apt install mingw-w64
 # Docker Kali install: Blank out if using a Debian based system other than Kali and use the one above instead
 sudo apt install -y docker.io
 sudo systemctl enable docker --now
+# add yourself to the docker group to use docker without sudo
 sudo usermod -aG docker $USER
-docker
+
 
 #Install MonoDevelop IDE
 sudo apt install apt-transport-https dirmngr

@@ -57,7 +57,7 @@ sudo systemctl enable netfilter-persistent.service
   
 
 
-#Install microsoft dotnet sdk 3.1
+#Install microsoft dotnet sdk 7.0
 wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb

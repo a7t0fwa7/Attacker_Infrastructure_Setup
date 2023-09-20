@@ -58,13 +58,10 @@ sudo systemctl enable netfilter-persistent.service
 
 
 #Install microsoft dotnet sdk 3.1
-wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
-sudo apt -y update
-sudo apt -y install apt-transport-https
-sudo apt -y update
-sudo apt -y install dotnet-sdk-3.1
 rm packages-microsoft-prod.deb
+sudo apt-get update && sudo apt-get install -y dotnet-sdk-7.0
 
 # Install Mingw-w64
 sudo apt install mingw-w64

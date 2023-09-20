@@ -66,13 +66,17 @@ sudo apt-get update && sudo apt-get install -y dotnet-sdk-7.0
 # Install Mingw-w64
 sudo apt install mingw-w64
 
-#Install Docker for Debian Buster and enable it (not opesec safe but practical for my usage)
-sudo curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' | sudo tee /etc/apt/sources.list.d/docker.list 
-sudo apt update
-sudo apt install docker-ce docker-ce-cli containerd.io -y 
-#sudo systemctl start docker
-sudo systemctl enable docker
+#Install Docker for Debian Bullseye and enable it (not opesec safe but practical for my usage)
+#printf '%s\n' "deb https://download.docker.com/linux/debian bullseye stable" | sudo tee /etc/apt/sources.list.d/docker-ce.list
+#curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg
+#sudo apt update
+#sudo apt install -y docker-ce docker-ce-cli containerd.io
+
+# Docker Kali install: Blank out if using a Debian based system other than Kali and use the one above instead
+sudo apt install -y docker.io
+sudo systemctl enable docker --now
+sudo usermod -aG docker $USER
+docker
 
 #Install MonoDevelop IDE
 sudo apt install apt-transport-https dirmngr

@@ -63,6 +63,9 @@ sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 sudo apt-get update && sudo apt-get install -y dotnet-sdk-7.0
 
+# Install Rust
+sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # Install Mingw-w64
 sudo apt install mingw-w64
 
@@ -104,6 +107,12 @@ sudo mkdir /opt/Cloud
 sudo mkdir /opt/CheatSheets
 
 #Download tools of the trade
+sudo git clone https://github.com/dafthack/GraphRunner.git 
+sudo git clone https://github.com/The-Viper-One/PsMapExec.git /opt/Offensive-Tools/PsMapExec-Enum
+sudo git clone https://github.com/a7t0fwa7/Windows-Local-Privilege-Escalation-CheatSheet.git /opt/CheatSheets/WinPrivEsc
+sudo git clone https://github.com/h0ru/AMSI-Reaper.git /opt/AV-Evasion-Tools/AMSI-Reaper
+sudo git clone https://github.com/itm4n/PrivescCheck.git /opt/Offensive-Tools/PrivEscChecker
+sudo git clone https://github.com/evilsocket/legba.git /opt/Intel-Tools/LegbaBruteForcer
 sudo git clone https://github.com/3nock/sub3suite/releases/download/v0.0.3/sub3suite-v0.0.3-linux.tar.gz /opt/Intel-Tools/sub3suite 
 sudo git clone https://github.com/lengjibo/RedTeamTools.git /opt/Offensive-Tools/RedTeamTools
 sudo git clone https://github.com/aaaddress1/xlsKami.git /opt/AV-Evasion-Tools/ShenHaoMaXlsKami
@@ -197,6 +206,8 @@ sudo git clone https://github.com/Ignitetechnologies/Credential-Dumping.git /opt
 
 
 # Download Cloud Analysis tools
+suod git clone https://github.com/lutzenfried/Delegate.git /opt/Cloud/GCP_Domain_Delegation_Abuse
+sudo git clone https://github.com/initstring/cloud_enum.git /opt/Cloud/Multi_Cloud_Enum_tool
 sudo git clone https://github.com/RhinoSecurityLabs/GCP-IAM-Privilege-Escalation.git /opt/Cloud/GCP-IAM-Priv-Esc
 sudo git clone https://github.com/RhinoSecurityLabs/CloudScraper.git /opt/Cloud/CloudScraper
 sudo git clone https://github.com/RhinoSecurityLabs/GCPBucketBrute.git /opt/Cloud/GCPBucketBrute

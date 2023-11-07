@@ -22,8 +22,8 @@ sudo iptables -A FORWARD -i eth0 -o tun0 -j ACCEPT
 sudo netfilter-persistent save
 sudo systemctl enable netfilter-persistent.service
 
-
-
+#Enable SSH
+sudo systemctl enable ssh.service
 
 
 # Check if command line tools are installed
@@ -427,7 +427,7 @@ sudo git clone --recurse-submodules https://github.com/bats3c/shad0w.git /opt/Co
 cd shad0w
 sudo ./shad0w install
 
-sudo systemctl enable ssh.service
+
 
 echo -en "\nDark Ops || Field-Operations\nred-team-ops\n\n" | sudo tee /etc/motd
 

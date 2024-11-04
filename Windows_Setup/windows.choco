@@ -5,16 +5,17 @@ $env:TEMP = "C:\Temp"
 $env:TMP = "C:\Temp"
 
 # Defender
-#$Downloads = Get-ItemPropertyValue 'HKCU:\software\microsoft\windows\currentversion\explorer\shell folders\' -Name '{374DE290-123F-4565-9164-39C4925E467B}'
+$Downloads = Get-ItemPropertyValue 'HKCU:\software\microsoft\windows\currentversion\explorer\shell folders\' -Name '{374DE290-123F-4565-9164-39C4925E467B}'
 #Add-MpPreference -ExclusionPath $Downloads
 #Add-MpPreference -ExclusionPath "C:\payloads\"
-#Add-MpPreference -ExclusionPath "C:\tools\"
+Add-MpPreference -ExclusionPath "C:\tools\"
 #Add-MpPreference -ExclusionPath "C:\Users\a7t0fwa7"
 #Add-MpPreference -ExclusionPath "P:\"
-#Set-MpPreference -MAPSReporting Disabled
-#Set-MpPreference -SubmitSamplesConsent NeverSend
+Set-MpPreference -MAPSReporting Disabled
+Set-MpPreference -SubmitSamplesConsent NeverSend
 
 # Packages
+choco install cutter
 choco install reshack
 choco install winapioverride
 choco install apimonitor
@@ -32,10 +33,10 @@ choco install radare2
 choco feature enable -n allowGlobalConfirmation
 choco install 7zip
 choco install git
-choco install googlechrome --ignore-checksums
-#choco install brave --ignore-checksums
+choco install googlechrome
+#choco install brave
 choco install heidisql
-choco install openjdk11
+choco install openjdk
 choco install putty
 choco install sysinternals --params "/InstallDir:C:\tools\sysinternals"
 choco install vscode
@@ -77,6 +78,9 @@ choco install visualstudio2022-workload-manageddesktop
 choco install visualstudio2022-workload-vctools
 choco install vcredist140
 choco install anaconda3
+choco install visualstudio2022community
+choco install visualstudio2022buildtools
+choco install sysinternals
 # Misc
 $DesktopPath = [Environment]::GetFolderPath("Desktop")
 Remove-Item -Path "C:\Users\Public\Desktop\Boxstarter Shell.lnk"

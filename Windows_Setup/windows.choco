@@ -38,7 +38,7 @@ choco install googlechrome
 choco install heidisql
 choco install openjdk
 choco install putty
-choco install sysinternals --params "/InstallDir:C:\tools\sysinternals"
+choco install sysinternals --params "/InstallDir:C:\\tools\\sysinternals"
 choco install vscode
 choco install foxitreader
 choco install python
@@ -73,6 +73,7 @@ choco install notepadplusplus
 choco install ghidra
 choco install hxd
 choco install x64dbg.portable
+choco install github-desktop
 choco install visualstudio2022community
 choco install visualstudio2022-workload-manageddesktop
 choco install visualstudio2022-workload-vctools

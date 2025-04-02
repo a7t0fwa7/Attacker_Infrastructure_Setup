@@ -64,6 +64,7 @@ choco install psexec
 choco install signal
 choco install cherrytree
 choco install joplin
+choco install obsidian
 choco install nugetpackagemanager
 choco install vscode-cloud-code
 choco install vscode-ansible

@@ -101,11 +101,11 @@ Write-Host "Installing Chocolatey packages..."
 
 # Core Dev & System Tools
 Write-Host "  Installing Core Dev & System Tools..."
-choco install -y 7zip git googlechrome curl wget putty cmder mingw notepadplusplus sysinternals --params "'/InstallDir:$([System.IO.Path]::Combine($ToolsDir, 'sysinternals'))'" winmerge microsoft-windows-terminal
+choco install -y 7zip git chromium brave firefox curl wget putty cmder mingw notepadplusplus sysinternals --params "'/InstallDir:$([System.IO.Path]::Combine($ToolsDir, 'sysinternals'))'" winmerge microsoft-windows-terminal
 
 # Reverse Engineering & Analysis
 Write-Host "  Installing Reverse Engineering & Analysis Tools..."
-choco install -y cutter reshack winapioverride apimonitor jregexanalyser regshot fakenet pestudio hollowshunter pebear radare2 ghidra hxd x64dbg.portable pesieve detect-it-easy
+choco install -y cutter reshack winapioverride apimonitor jregexanalyser regshot fakenet pestudio hollowshunter pebear radare2 ghidra hxd x64dbg.portable pesieve die
 
 # Development Environments & Tools
 Write-Host "  Installing Development Environments & Tools..."
@@ -113,7 +113,7 @@ choco install -y openjdk graphviz python anaconda3 golang visualstudio2022commun
 
 # Cloud & Infra
 Write-Host "  Installing Cloud & Infra Tools..."
-choco install -y awscli azure-cli kubernetes-cli terraform
+choco install -y awscli azure-cli kubernetes-cli terraform pulumi
 
 # IDEs & Editors
 Write-Host "  Installing IDEs & Editors..."

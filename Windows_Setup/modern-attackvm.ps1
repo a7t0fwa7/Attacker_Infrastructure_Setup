@@ -205,7 +205,7 @@ function Install-ChocolateyTools {
                 choco install $package -y
                 Write-Log "  Installed $package" -Level "SUCCESS"
             } catch {
-                Write-Log "  Error installing $package: $_" -Level "ERROR"
+                Write-Log "  Error installing $($package): $_" -Level "ERROR"
             }
         }
     }
@@ -306,7 +306,7 @@ function Install-GitTools {
                     Write-Log "  Repository already exists: $repoName"
                 }
             } catch {
-                Write-Log "  Error cloning $repo: $_" -Level "ERROR"
+                Write-Log "  Error cloning $($repo): $_" -Level "ERROR"
             }
         }
     }

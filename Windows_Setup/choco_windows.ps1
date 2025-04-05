@@ -121,7 +121,7 @@ choco install -y vscode vscode-cloud-code vscode-ansible
 
 # Networking & Security
 Write-Host "  Installing Networking & Security Tools..."
-choco install -y nmap wireshark tor-browser netcat mobaexterm
+choco install -y nmap wireshark tor-browser netcat mobaexterm processhacker
 
 # Password Cracking
 Write-Host "  Installing Password Cracking Tools..."
